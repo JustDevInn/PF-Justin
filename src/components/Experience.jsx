@@ -12,6 +12,9 @@ import bootstrap from "../assets/bootstrap.png";
 import git from "../assets/git.png";
 import mongo from "../assets/mongodb.png";
 
+
+
+
 const Experience = () => {
   const techs = [
     {
