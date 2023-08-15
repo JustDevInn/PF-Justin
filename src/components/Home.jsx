@@ -11,35 +11,28 @@ const Home = () => {
     >
       <div className="max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full px-4 md:flex-row">
         <div className="flex flex-col justify-center h-full">
-          <h2 className="text-4xl sm:text-7xl font-bold text-white">
-            I'm a Front end developer
-          </h2>
+        <h2 className='text-4xl sm:text-7xl font-bold text-gray-500'>Hi there!</h2>
           <p className="text-gray-500 py-4 max-w-md">
-            I have 2 years of experience building and desgining software.
-            Currently, I love to work on web application using technologies like
-            React and Tailwind.
+          Hey there, I'm Justin Peeters and welcome to my website. Feel free to check out what I've been up to.
+          
+          This website has been created using React and Tailwind CSS. Enjoy the smooth scroll and engaging website. 
+          
+          If you want to get in touch, feel free to send me a message anytime. 
           </p>
 
           <div>
-            <Link
-              to="portfolio"
-              smooth
-              duration={500}
-              className="group text-white w-fit px-6 py-3 my-2 flex items-center rounded-md bg-gradient-to-r from-rose-500 to-rose-900 cursor-pointer"
-            >
-              Portfolio
-              <span className="group-hover:rotate-90 duration-300">
-                <MdOutlineKeyboardArrowRight size={25} className="ml-1" />
-              </span>
-            </Link>
+          <Link to="portfolio" smooth duration={500} className='group text-white w-fit px-6 py-3 my-2 flex items-center rounded-md bg-gradient-to-r from-red-900 via-red-600 to-Zinc-800 cursor-pointer'>
+                 Portfolio
+                 <span className='group-hover:rotate-90 duration-300'> <MdOutlineKeyboardArrowRight size={25} className='ml-1'/> </span>
+                 </Link> 
           </div>
         </div>
 
-        <div className="rounded-2xl mx-auto w-1/3 sm:w-full md:w-full transition-shadow">
+        <div className='rounded-2xl mx-auto w-2/3 md:w-full ml-20'>
           <img
             src={HeroImage}
             alt="my profile"
-            className="rounded-2xl mx-auto w-1/3 sm:w-full md:w-full transition-shadow"
+            className='rounded-2xl mx-auto w-2/3 md:w-full ml-20'
           />
         </div>
       </div>

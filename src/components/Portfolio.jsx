@@ -56,7 +56,7 @@ const Portfolio = () => {
           <p className="text-4xl font-bold inline border-b-4 border-rose-700">
             Portfolio
           </p>
-          <p className="py-6">Check out some of my work right here</p>
+          <p className="py-6">Check out some of my work right here. Click on 'Code' to go to my github page to review the code</p>
         </div>
 
         <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0">
