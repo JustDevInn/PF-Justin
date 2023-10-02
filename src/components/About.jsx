@@ -4,11 +4,11 @@ const About = () => {
   return (
     <div
       name="about"
-      className="w-full h-screen bg-gradient-to-b from-gray-800 to-black text-white"
+      className="w-full h-screen bg-gradient-to-b from-gray-800 to-black text-gray-300"
     >
       <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full">
         <div className="pb-8">
-          <p className="text-4xl font-bold inline border-b-4 border-rose-700">
+          <p className="text-4xl text-white font-bold inline border-b-4 border-rose-700">
             About
           </p>
         </div>
@@ -53,7 +53,7 @@ const About = () => {
         <br />
         <p className="text-xl font-bold inline border-b-4 border-rose-900">Personal Connection</p>
         <p className="text-xl mt-5">
-        Programming wasn't initially in my wheelhouse, but its inherent honesty intrigued me. Code is either "true" or not, and that sense of clarity is empowering. With every line of code, I exercise my creative freedom to build and shape. Beyond coding, I find solace in gaming (hello, OSRS), riding waves, staying active, and connecting with friends over coffee or sun-soaked beach outings.
+        Programming wasn't initially in my wheelhouse, but its inherent honesty intrigued me. Code is either "true" or not, and that sense of clarity is empowering. With every line of code, I exercise my creative freedom to build and shape. Beyond coding, I find solace in gaming OSRS, riding waves, staying active, and connecting with friends over coffee or sun-soaked beach outings.
         </p>
 
         <br />

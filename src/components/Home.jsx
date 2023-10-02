@@ -11,8 +11,8 @@ const Home = () => {
     >
       <div className="max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full px-4 md:flex-row">
         <div className="flex flex-col justify-center h-full">
-        <h2 className='text-4xl sm:text-7xl font-bold text-gray-500'>Hi there!</h2>
-          <p className="text-gray-500 py-4 max-w-md">
+        <h2 className='text-4xl sm:text-7xl font-bold text-gray-400'>Hi there!</h2>
+          <p className="text-gray-300 py-4 max-w-md">
           Hey there, I'm Justin Peeters and welcome to my website. Feel free to check out what I've been up to.
           
           This website has been created using React and Tailwind CSS. Enjoy the smooth scroll and engaging website. 
@@ -28,11 +28,11 @@ const Home = () => {
           </div>
         </div>
 
-        <div className='rounded-2xl mx-auto w-2/3 md:w-full ml-20'>
+        <div className='rounded-2xl mx-auto  md:w-full '>
           <img
             src={HeroImage}
             alt="my profile"
-            className='rounded-2xl mx-auto w-2/3 md:w-full ml-20'
+            className='rounded-2xl mx-auto  md:w-2/3 '
           />
         </div>
       </div>
