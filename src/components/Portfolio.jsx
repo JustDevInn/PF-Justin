@@ -3,7 +3,7 @@ import revera from "../assets/portfolio/reveraclone.png";
 import simonsays from "../assets/portfolio/simonsays.png";
 import beers from "../assets/portfolio/beers.jpeg";
 import recipe from "../assets/portfolio/recipe.png";
-import drumkit from "../assets/portfolio/drumkit.jpeg";
+import ibussanctuary from "../assets/portfolio/ibussanctuary.png";
 import contacts from "../assets/portfolio/contacts.jpeg";
 
 const Portfolio = () => {
@@ -34,9 +34,9 @@ const Portfolio = () => {
     },
     {
       id: 5,
-      src: drumkit,
-      title:"JS - Drum kit App",
-      href:"https://github.com/JustDevInn/Drum-kit",
+      src: ibussanctuary,
+      title:"Dog foster website",
+      href:"https://github.com/JustDevInn/Dians-Sanctuary",
     },
     {
       id: 6,
@@ -61,10 +61,10 @@ const Portfolio = () => {
 
         <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0">
           {portfolios.map(({ id, src, title, href }) => (
-            <div key={id} className="shadow-md shadow-gray-600 rounded-lg">
-            <img src={src} alt="" className="w-20 h-20 mx-auto rounded-md duration-200 hover:scale-105" />
+            <div key={id} className="shadow-md shadow-gray-600 rounded-lg duration-200 hover:scale-105">
+            <img src={src} alt="" className="w-20 h-20 mx-auto rounded-md "></img>
               <div className="flex items-center justify-center">
-              <p className="w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105">{title}</p>
+              <p className="w-1/2 px-6 py-3 m-4 ">{title}</p>
                 <button className="w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105">
                 <a 
                 href={href} 
