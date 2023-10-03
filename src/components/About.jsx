@@ -22,7 +22,7 @@ const About = () => {
 
         <p className="text-xl font-bold inline border-b-4 border-rose-900">Experience and Projects</p>
         <p className="text-xl mt-5">
-        During my time at IronHack in Amsterdam, I had the opportunity to dive into a variety of projects that showcase my skills and expertise. I've successfully recreated the user interface of a Spotify website, designed and developed a captivating Simon Says game, and collaborated on a dynamic full-stack webshop featuring sporting goods. These projects have all been built using the MERN stack, reflecting my proficiency and commitment to this technology.
+        My latest project is the Dog foster website, I've created this website as a blueprint for a women I met in Bali. She had been fostering dogs for years but had no way to display her work. During my time at IronHack in Amsterdam, I had the opportunity to dive into a variety of projects that showcase my skills and expertise. I've successfully recreated the user interface of a Spotify website, designed and developed a captivating Simon Says game, and collaborated on a dynamic full-stack webshop featuring sporting goods. These projects have all been built using the MERN stack, reflecting my proficiency and commitment to this technology.
         </p>
 
         <br />

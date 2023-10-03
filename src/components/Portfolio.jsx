@@ -16,9 +16,9 @@ const Portfolio = () => {
     },
     {
       id: 2,
-      src: simonsays,
-      title:"Simon says",
-      href: "https://github.com/JustDevInn/Simon-game-project-v4",
+      src: ibussanctuary,
+      title:"Dog foster website",
+      href: "https://github.com/JustDevInn/Dians-Sanctuary",
     },
     {
       id: 3,
@@ -34,9 +34,9 @@ const Portfolio = () => {
     },
     {
       id: 5,
-      src: ibussanctuary,
-      title:"Dog foster website",
-      href:"https://github.com/JustDevInn/Dians-Sanctuary",
+      src: simonsays,
+      title:"Simon says",
+      href:"https://github.com/JustDevInn/Simon-game-project-v4",
     },
     {
       id: 6,
