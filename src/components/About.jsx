@@ -13,33 +13,23 @@ const About = () => {
           </p>
         </div>
 <div className="overflow-auto">
-        <p className="text-2xl font-bold inline ">About me</p>
-        <p className="text-l mt-1 italic">
-         What drives me in this field are the authenticity, creativity, and problem-solving aspects of programming.
+        <p className="text-2xl font-teko inline uppercase tracking-wider text-white">About Justin Peeters</p>
+        <p className="text-l italic mt-5 px-5">
+        Justin is a Bali based developer with over four years of diving into this world, he’s found his passion in crafting websites that not only stand out visually but also offer an experience that resonates with users on a personal level.
+        <br></br><br></br>
+        Creating platforms that make a real difference is his compass. He thrives on the challenge of designing interfaces that not only captivate but also contribute positively to people's lives.
+        <br></br><br></br>
+        Beyond the digital realm, he finds solace and strength in the self-discipline of gymnastic strength training—a practice that resonates from his experiences in the Royal Marine Corps. Gaming has been a lifelong passion, but nothing beats the thrill of venturing into nature's embrace, discovering new horizons and hidden gems.
+        <br></br><br></br>
+        Recently, my wife and I made the bold decision to call Bali home. The welcoming climate and the warmth exuded by the local community have infused our lives with a daily dose of joy.
+        <br></br><br></br>
+        He’s on journey of merging technology with artistry, creating digital landscapes that leave a lasting impact and offer an immersive experience.
         </p>
 
-        <br />
-
-        <p className="text-2xl font-bold inline ">Experience and Projects</p>
-        <p className="text-l mt-1 italic">
-        My latest project is the Dog foster website, I've created this website as a blueprint for a truely inspiring woman I met in Bali. She had been fostering dogs for years but had no way to display all her work and wasnot able to attract potential adopers via the internet. During my time at IronHack in Amsterdam, I had the opportunity to dive into a variety of projects that showcase my skills and expertise. I've successfully recreated the user interface of a Spotify website, designed and developed a captivating Simon Says game, and collaborated on a dynamic full-stack webshop featuring sporting goods.
-        </p>
 
         <br />
-        <p className="text-2xl font-bold inline ">Continuous Growth and Collaboration</p>
-        <p className="text-l mt-1 italic">
-        Staying ahead in the rapidly evolving tech landscape is crucial to me. I actively seek out new developments, embracing innovations that enhance the quality of programming. I find joy in understanding the underlying principles that power the tools I use. Collaboration fuels my enthusiasm—whether collaborating on projects, sharing insights, or leveraging diverse learning styles to create a rich and dynamic learning environment.
-        </p>
-
-        <br />
-        <p className="text-2xl font-bold inline ">Personal Connection</p>
-        <p className="text-l mt-1 italic">
-        Programming wasn't initially in my wheelhouse, but its inherent honesty intrigued me. Code is either "true" or not, and that sense of clarity is empowering. With every line of code, I exercise my creative freedom to build and shape. Beyond coding, I find solace in gaming, riding waves, gymnastic strength training, and connecting with friends over coffee or sun-soaked beach outings.
-        </p>
-
-        <br />
-        <p className="text-2xl font-bold inline ">Let's Connect</p>
-        <p className="text-l mt-1 italic">
+        <p className="text-2xl font-bold inline text-white">Let's Connect</p>
+        <p className="text-l mt-1 italic px-5">
         If you're as enthusiastic about software development as I am, let's connect! Feel free to reach out via email or phone, or find me on LinkedIn to explore potential collaborations and exciting opportunities.
         </p>
 
