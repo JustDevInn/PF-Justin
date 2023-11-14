@@ -29,11 +29,10 @@ const Portfolio = () => {
   return (
     <div
       name="portfolio"
-      className="min-h-screen bg-gradient-to-b from-black to-gray-800 w-full text-white"
-    >
+      className="min-h-screen bg-gradient-to-b from-gray-900 via-black to-gray-900 w-full text-white">
       <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full pt-20 pb-20">
         <div className="pb-8">
-          <p className="text-4xl uppercase font-teko tracking-wider inline border-b border-award-orange">
+          <p className="text-6xl uppercase font-teko tracking-wider inline border-b border-award-orange">
             Work
           </p>
         </div>
@@ -44,9 +43,9 @@ const Portfolio = () => {
             <div className="absolute flex items-left justify-center top-10 left-5 flex-col w-2/5">
               <h2 class={`text-4xl text-white ${titleFontStyle} mb-10 md:mb-40`}>{title}</h2>
               <p className="text-gray-300 font-thin font-teko tracking-wider mb-5">{role}</p>
-              <h2 class="lg:text-6xl text-5xl text-white font-teko uppercase mb-5">{description}</h2>
+              <h2 class="lg:text-6xl md:text-5xl text-4xl text-white font-teko uppercase mb-5">{description}</h2>
               <p className="text-white mb-5">{explanation}</p>
-              <button className="sm:w-2/5 font-teko font-thin tracking-widest border border-white px-6 py-2 duration-300 hover:bg-white hover:text-black">
+              <button className="sm:w-2/5 font-teko font-thin tracking-widest border-2 border-white px-6 py-2 duration-300 hover:bg-white hover:text-black">
                 <a 
                 href={href} 
                 target="_blank"

@@ -68,11 +68,11 @@ const Experience = () => {
   return (
     <div
       name="experience"
-      className="bg-gradient-to-b from-gray-800 to-black w-full min-h-screen"
+      className="bg-gradient-to-b from-gray-900 via-black to-gray-900 w-full min-h-screen"
     >
       <div className="max-w-screen-lg mx-auto p-4 flex flex-col justify-center w-full text-white vh-100">
         <div>
-          <p className="text-4xl text-white uppercase font-teko tracking-wider border-b border-award-orange p-2 inline">
+          <p className="text-6xl text-white uppercase font-teko tracking-wider border-b border-award-orange p-2 inline">
             Technologies
           </p>
           <p className="py-6 text-gray-300">These are the technologies I use in my work.</p>
@@ -93,7 +93,7 @@ const Experience = () => {
 
       <div className="mt-20 max-w-screen-lg mx-auto p-4 flex flex-col justify-center w-full text-white ">
         <div>
-          <p className="text-4xl text-white uppercase font-teko tracking-wider border-b border-award-orange p-2 inline">
+          <p className="text-6xl text-white uppercase font-teko tracking-wider border-b border-award-orange p-2 inline">
             Education
           </p>
           <p className="py-6 text-gray-300">These are the courses that I've graduated from</p>
