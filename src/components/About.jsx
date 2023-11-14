@@ -8,7 +8,7 @@ const About = () => {
     >
       <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full pt-20 pb-20">
         <div className="pb-8 mb-10">
-          <p className="text-6xl uppercase text-white font-teko tracking-wider inline border-b border-award-orange">
+          <p className="text-6xl uppercase text-white font-teko tracking-wider inline">
             About
           </p>
         </div>
@@ -28,7 +28,7 @@ const About = () => {
 
 
         <br />
-        <p className="text-2xl font-bold inline text-white">Let's Connect</p>
+        <p className="text-2xl font-teko inline uppercase tracking-wider text-white">Let's Connect</p>
         <p className="text-l mt-1 italic px-5">
         If you're as enthusiastic about software development as I am, let's connect! Feel free to reach out via email or phone, or find me on LinkedIn to explore potential collaborations and exciting opportunities.
         </p>

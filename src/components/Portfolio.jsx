@@ -32,7 +32,7 @@ const Portfolio = () => {
       className="min-h-screen bg-gradient-to-b from-gray-900 via-black to-gray-900 w-full text-white">
       <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full pt-20 pb-20">
         <div className="pb-8">
-          <p className="text-6xl uppercase font-teko tracking-wider inline border-b border-award-orange">
+          <p className="text-6xl uppercase font-teko tracking-wider inline">
             Work
           </p>
         </div>
