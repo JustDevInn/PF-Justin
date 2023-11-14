@@ -2,6 +2,51 @@ import React from "react";
 import HeroImage from "../assets/JustinHD.png";
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 import { Link } from "react-scroll";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { HiOutlineMail } from "react-icons/hi";
+import { BsFillPersonLinesFill } from "react-icons/bs";
+
+
+  const links = [
+    {
+      id: 1,
+      child: (
+        <>
+        <FaLinkedin size={30} />
+        </>
+      ),
+      href: "https://www.linkedin.com/in/justin-peeters/",
+    },
+    {
+      id: 2,
+      child: (
+        <>
+         <FaGithub size={30} />
+        </>
+      ),
+      href: "https://github.com/JustDevinn",
+    },
+    {
+      id: 3,
+      child: (
+        <>
+         <HiOutlineMail size={30} />
+        </>
+      ),
+      href: "mailto:Peeters.justin@yahoo.com",
+    },
+    {
+      id: 4,
+      child: (
+        <>
+        <BsFillPersonLinesFill size={30} />
+        </>
+      ),
+      href: "/CVJustinPeeters.pdf",
+      download: true,
+    },
+  ]
+
 
 const Home = () => {
   return (
@@ -22,8 +67,8 @@ const Home = () => {
           <div>
           <Link to="portfolio" smooth duration={500} className='group text-white border border-white w-fit px-6 py-3 my-2 flex items-center cursor-pointer'>
                  Portfolio
-                 <span className='group-hover:rotate-90 duration-300 hover:text-[#ff5538]'> <MdOutlineKeyboardArrowRight size={25} className='ml-1'/> </span>
-                 </Link> 
+                 <span className='group-hover:rotate-90 duration-300 hover:text-orange-300'> <MdOutlineKeyboardArrowRight size={25} className='ml-1'/> </span>
+          </Link> 
           </div>
         </div>
 
@@ -35,6 +80,30 @@ const Home = () => {
           />
         </div>
       </div>
+{/* Social icons */}
+      <div className="lg:hidden">
+      <ul className="flex flex-row w-full justify-evenly">
+        {links.map(({ id, child, href, download }) => (
+          <li
+            key={id}
+            className={
+              "p-4"
+            }
+          >
+            <a
+              href={href}
+              className="text-gray-300 hover:text-white"
+              download={download}
+              target="_blank"
+              rel="noreferrer"
+            >
+              {child}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+{/* End social icons */}
     </div>
   );
 };

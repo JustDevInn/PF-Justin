@@ -2,7 +2,6 @@ import React from "react";
 import beers from "../assets/portfolio/craftsman.jpg";
 import ibussanctuary from "../assets/portfolio/donatedog2.jpg";
 
-
 const Portfolio = () => {
   const portfolios = [
     {
