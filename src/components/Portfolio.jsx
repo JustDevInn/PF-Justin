@@ -1,48 +1,28 @@
 import React from "react";
-import revera from "../assets/portfolio/reveraclone.png";
-import simonsays from "../assets/portfolio/simonsays.png";
-import beers from "../assets/portfolio/beers.jpeg";
-import recipe from "../assets/portfolio/recipe.png";
-import ibussanctuary from "../assets/portfolio/ibussanctuary.png";
-import contacts from "../assets/portfolio/contacts.jpeg";
+import beers from "../assets/portfolio/craftsman.jpg";
+import ibussanctuary from "../assets/portfolio/donatedog2.jpg";
+
 
 const Portfolio = () => {
   const portfolios = [
     {
       id: 1,
       src: beers,
-      title:"Full-stack web App",
+      role: "Designer and developer",
+      description: "Showcasing full stack capabilities",
+      explanation: "This was a project that I did for a software development company, the purpose was displaying the connection of front and back end.",
+      title:"The Brewery",
+      titleFontStyle: "font-berk",
       href:"https://github.com/JustDevInn/PxlWidgets-Beer-Assignment-Reactjs",
     },
     {
       id: 2,
       src: ibussanctuary,
-      title:"Dog foster website",
-      href: "https://github.com/JustDevInn/Dians-Sanctuary",
-    },
-    {
-      id: 3,
-      src: revera,
-      title:"Bootstrap website clone",
-      href:"https://github.com/JustDevInn/lab-bootstrap-cloning-revera",
-    },
-    {
-      id: 4,
-      src: recipe,
-      title:"CRUD - Recipes App",
-      href:"https://github.com/JustDevInn/lab-recipes-crud",
-    },
-    {
-      id: 5,
-      src: simonsays,
-      title:"Simon says",
-      href:"https://github.com/JustDevInn/Simon-game-project-v4",
-    },
-    {
-      id: 6,
-      src: contacts,
-      title:"CRUD - Contact App",
-      href:"https://github.com/JustDevInn/lab-react-ironcontacts",
+      role: "Designer and developer",
+      description: "Creating online precense for the sanctuary",
+      explanation: "I helped dian create an online platform for her work as an dog fosterer and saver.",
+      title:"Rescue sanctuary",
+      href: "https://dians-sanctuary.netlify.app/",
     },
   ];
 
@@ -51,28 +31,30 @@ const Portfolio = () => {
       name="portfolio"
       className="min-h-screen bg-gradient-to-b from-black to-gray-800 w-full text-white"
     >
-      <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full">
+      <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full pt-20 pb-20">
         <div className="pb-8">
-          <p className="text-4xl font-bold inline border-b-4 border-rose-700">
-            Portfolio
+          <p className="text-4xl uppercase font-teko tracking-wider inline border-b border-award-orange">
+            Work
           </p>
-          <p className="py-6">Check out some of my work right here. Click on 'Code' to go to my github page to review the code</p>
         </div>
-
-        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0">
-          {portfolios.map(({ id, src, title, href }) => (
-            <div key={id} className="shadow-md shadow-gray-600 rounded-lg duration-200 hover:scale-105">
-            <img src={src} alt="" className="w-20 h-20 mx-auto rounded-md "></img>
-              <div className="flex items-center justify-center">
-              <p className="w-1/2 px-6 py-3 m-4 ">{title}</p>
-                <button className="w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105">
+        <div className="grid sm:grid-cols-1 gap-8  sm:px-0 mt-20">
+          {portfolios.map(({ id, src, title, href,role, description, explanation, titleFontStyle }) => (
+          <div key={id} className="relative">
+            <img src={src} alt="" className="w-full h-screen mx-auto object-cover"></img>
+            <div className="absolute flex items-left justify-center top-10 left-5 flex-col w-2/5">
+              <h2 class={`text-4xl text-white ${titleFontStyle} mb-10 md:mb-40`}>{title}</h2>
+              <p className="text-gray-300 font-thin font-teko tracking-wider mb-5">{role}</p>
+              <h2 class="lg:text-6xl text-5xl text-white font-teko uppercase mb-5">{description}</h2>
+              <p className="text-white mb-5">{explanation}</p>
+              <button className="sm:w-2/5 font-teko font-thin tracking-widest border border-white px-6 py-2 duration-300 hover:bg-white hover:text-black">
                 <a 
                 href={href} 
                 target="_blank"
-                rel="noreferrer">Code</a>
+                rel="noreferrer">VIEW WEBSITE</a>
                 </button>
-              </div>
+
             </div>
+          </div>
           ))}
         </div>
       </div>
@@ -81,3 +63,8 @@ const Portfolio = () => {
 };
 
 export default Portfolio;
+
+
+
+
+
