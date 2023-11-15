@@ -30,12 +30,12 @@ const Portfolio = () => {
       name="portfolio"
       className="min-h-screen bg-gradient-to-b from-gray-900 via-black to-gray-900 w-full text-white">
       <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full pt-20 pb-20">
-        <div className="pb-8">
+        <div className="">
           <p className="text-6xl uppercase font-teko tracking-wider inline">
             Work
           </p>
         </div>
-        <div className="grid sm:grid-cols-1 gap-8  sm:px-0 mt-20">
+        <div className="grid sm:grid-cols-1 gap-8  sm:px-0 mt-10">
           {portfolios.map(({ id, src, title, href,role, description, explanation, titleFontStyle }) => (
           <div key={id} className="relative">
             <img src={src} alt="" className="w-full h-screen mx-auto object-cover"></img>

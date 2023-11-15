@@ -11,7 +11,7 @@ const Contact = () => {
           <p className="text-6xl uppercase font-teko tracking-wider inline ">
             Contact
           </p>
-          <p className="py-6 text-gray-300">Submit the form below to get in touch with me</p>
+          <p className="py-6 text-gray-300">If you want to chat, train, or grab a drink and talk web design, don't hesitate shoot me an email.</p>
         </div>
 
         <div className=" flex justify-center items-center">
