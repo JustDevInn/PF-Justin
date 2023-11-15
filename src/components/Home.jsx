@@ -52,7 +52,7 @@ const Home = () => {
   return (
     <div
       name="home"
-      className="min-h-screen w-full bg-gradient-to-b from-gray-900 via-black to-gray-900 pt-20" >
+      className="min-h-screen w-full bg-gradient-to-b from-gray-900 via-black to-gray-900 pt-40" >
     <div className="max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full px-4 md:flex-row pb-20">
       <div className="flex flex-col justify-center h-full">
         <h5 className='text-4xl sm:text-5xl text-gray-300 font-teko py-4'>Justin is a developer and UI designer who loves to create unique platforms.</h5>    
