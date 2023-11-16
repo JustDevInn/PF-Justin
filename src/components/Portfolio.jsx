@@ -18,7 +18,7 @@ const Portfolio = () => {
       id: 2,
       src: ibussanctuary,
       role: "Designer and developer",
-      description: "Creating online precense for the animals",
+      description: "Creating online presence for the animals",
       explanation: "I helped dian create an online platform for her work as an dog fosterer and saver.",
       title:"Rescue sanctuary",
       href: "https://dians-sanctuary.netlify.app/",
