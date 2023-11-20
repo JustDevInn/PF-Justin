@@ -6,7 +6,6 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
 import { BsFillPersonLinesFill } from "react-icons/bs";
 
-
   const links = [
     {
       id: 1,
@@ -46,7 +45,7 @@ import { BsFillPersonLinesFill } from "react-icons/bs";
       download: true,
     },
   ]
-
+ 
 
 const Home = () => {
   return (
@@ -69,7 +68,8 @@ const Home = () => {
           </Link> 
           </div>
         </div>
-        <div className='w-4/5 mx-auto md:w-full'>
+        <div
+        className='w-4/5 mx-auto md:w-full'>
           <img
             src={HeroImage}
             alt="my profile"
@@ -80,7 +80,8 @@ const Home = () => {
 
 
 {/* Social icons */}
-      <div className="lg:hidden">
+      <div 
+      className="lg:hidden">
       <ul className="flex flex-row w-full justify-evenly">
         {links.map(({ id, child, href, download }) => (
           <li
