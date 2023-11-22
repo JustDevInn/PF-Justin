@@ -45,15 +45,19 @@ const Portfolio = () => {
             variants={fadeIn('up')}
             initial="hidden"
             whileInView={'show'}
-            viewport={{once: false, amount: 0.7}}
+            viewport={{once: false, amount: 0.1}}
             src={src} alt="" className="w-full h-[550px] mx-auto object-cover"></motion.img>
-            <div
+            <motion.div
+            variants={fadeIn('up')}
+            initial="hidden"
+            whileInView={'show'}
+            viewport={{once: false, amount: 0.1}}
             className="absolute flex items-left justify-center top-5 left-5 flex-col w-3/5 md:w-2/5">
               <motion.h2
               variants={fadeIn('up')}
               initial="hidden"
               whileInView={'show'}
-              viewport={{once: false, amount: 0.3}}
+              viewport={{once: false, amount: 0.1}}
               class={`text-4xl text-white ${titleFontStyle} mb-10`}>{title}</motion.h2>
               <motion.p
               variants={fadeIn('up')}
@@ -78,7 +82,7 @@ const Portfolio = () => {
                 target="_blank"
                 rel="noreferrer">VIEW WEBSITE</a>
                 </button>
-            </div>
+            </motion.div>
           </div>
           ))}
         </div>
