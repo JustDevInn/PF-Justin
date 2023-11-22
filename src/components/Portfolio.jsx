@@ -1,6 +1,8 @@
 import React from "react";
 import beers from "../assets/portfolio/craftsman.jpg";
 import ibussanctuary from "../assets/portfolio/donatedog2.jpg";
+import {motion} from 'framer-motion';
+import {fadeIn} from '../variants';
 
 const Portfolio = () => {
   const portfolios = [
@@ -30,26 +32,57 @@ const Portfolio = () => {
       name="portfolio"
       className="min-h-screen bg-gradient-to-b from-gray-900 via-black to-gray-900 w-full text-white">
       <div className="max-w-screen-lg mx-auto flex flex-col justify-center w-full h-full pt-20 pb-20">
-        <div className="">
-          <p className="text-6xl pl-4 uppercase font-teko tracking-wider inline">
+        <div
+        className="">
+          <p className="pl-10 text-6xl uppercase font-teko tracking-wider inline">
             Work
           </p>
         </div>
-        <div className="grid sm:grid-cols-1 gap-8  sm:px-0 mt-10">
+        <div className="px-5 grid sm:grid-cols-1 gap-8 sm:px-0 mt-10">
           {portfolios.map(({ id, src, title, href,role, description, explanation, titleFontStyle }) => (
           <div key={id} className="relative">
-            <img src={src} alt="" className="w-full h-screen mx-auto object-cover"></img>
-            <div className="absolute flex items-left justify-center top-10 left-5 flex-col w-3/5 md:w-2/5">
-              <h2 class={`text-4xl text-white ${titleFontStyle} mb-20 md:mb-40`}>{title}</h2>
-              <p className="text-gray-300 font-thin font-teko tracking-wider mb-5 md:mb-10">{role}</p>
-              <h2 class="lg:text-6xl md:text-5xl text-5xl text-white font-teko uppercase mb-5 md:mb-10">{description}</h2>
-              <p className="text-white mb-5 md:mb-10">{explanation}</p>
-              <button className="sm:w-2/5 font-teko font-thin tracking-widest border-2 border-white px-6 py-2 duration-300 hover:bg-white hover:text-black">
-                <a 
-                href={href} 
+            <motion.img
+            variants={fadeIn('up')}
+            initial="hidden"
+            whileInView={'show'}
+            viewport={{once: false, amount: 0.2}}
+            src={src} alt="" className="w-full h-[550px] mx-auto object-cover"></motion.img>
+            <div className="absolute flex items-left justify-center top-5 left-5 flex-col w-3/5 md:w-2/5">
+              <motion.h2
+              variants={fadeIn('up')}
+              initial="hidden"
+              whileInView={'show'}
+              viewport={{once: false, amount: 0.2}}
+              class={`text-4xl text-white ${titleFontStyle} mb-10`}>{title}</motion.h2>
+              <motion.p
+              variants={fadeIn('up')}
+              initial="hidden"
+              whileInView={'show'}
+              viewport={{once: false, amount: 0.2}}
+              className="text-gray-300 font-thin font-teko tracking-wider mb-5 md:mb-10">{role}</motion.p>
+              <motion.h2
+              variants={fadeIn('up')}
+              initial="hidden"
+              whileInView={'show'}
+              viewport={{once: false, amount: 0.2}}
+              className="lg:text-6xl md:text-5xl text-5xl text-white font-teko uppercase mb-5 md:mb-10">{description}</motion.h2>
+              <motion.p
+              variants={fadeIn('up')}
+              initial="hidden"
+              whileInView={'show'}
+              viewport={{once: false, amount: 0.2}}
+              className="text-white mb-5 md:mb-10">{explanation}</motion.p>
+              <motion.button
+              variants={fadeIn('up')}
+              initial="hidden"
+              whileInView={'show'}
+              viewport={{once: false, amount: 0.2}}
+              className="sm:w-2/5 font-teko font-thin tracking-widest border-2 border-white px-6 py-2 duration-300 hover:bg-white hover:text-black">
+                <a
+                href={href}
                 target="_blank"
                 rel="noreferrer">VIEW WEBSITE</a>
-                </button>
+                </motion.button>
 
             </div>
           </div>

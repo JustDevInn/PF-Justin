@@ -1,20 +1,27 @@
 import React from "react";
+import {motion} from 'framer-motion';
+import {fadeIn} from '../variants';
 
 const About = () => {
   return (
     <div
       name="about"
-      className="w-full h-screen bg-gradient-to-b from-gray-900 to-black text-gray-300"
+      className="px-5 w-full h-screen bg-gradient-to-b from-gray-900 to-black text-gray-300"
     >
-      <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full pt-20 pb-20">
+      <motion.div
+      variants={fadeIn('up')}
+      initial="hidden"
+      whileInView={'show'}
+      viewport={{once: false, amount: 0.2}}
+      className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full pt-20 pb-20">
         <div className="pb-8 mb-10">
           <p className="text-6xl uppercase text-white font-teko tracking-wider inline">
             About
           </p>
         </div>
 <div className="overflow-auto">
-        <p className="text-2xl font-teko inline uppercase tracking-wider text-white">About Justin Peeters</p>
-        <p className="text-l italic mt-5 px-5">
+        <p className=" text-2xl font-teko inline uppercase tracking-wider text-white">About Justin Peeters</p>
+        <p className="text-l italic mt-5 ">
         Justin is a Bali based developer with over four years of diving into this world, he’s found his passion in crafting websites that not only stand out visually but also offer an experience that resonates with users on a personal level.
         <br></br><br></br>
         Creating platforms that make a real difference is his compass. He thrives on the challenge of designing interfaces that not only captivate but also contribute positively to people's lives.
@@ -35,7 +42,7 @@ const About = () => {
 
         <br />
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };
