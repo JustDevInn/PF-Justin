@@ -45,7 +45,7 @@ const Portfolio = () => {
             variants={fadeIn('up')}
             initial="hidden"
             whileInView={'show'}
-            viewport={{once: false, amount: 0.2}}
+            viewport={{once: false, amount: 0.3}}
             src={src} alt="" className="w-full h-[550px] mx-auto object-cover"></motion.img>
             <motion.div
               variants={fadeIn('up')}
@@ -63,13 +63,13 @@ const Portfolio = () => {
               variants={fadeIn('up')}
               initial="hidden"
               whileInView={'show'}
-              viewport={{once: false, amount: 0.2}}
+              viewport={{once: false, amount: 0.3}}
               className="text-gray-300 font-thin font-teko tracking-wider mb-5 md:mb-10">{role}</motion.p>
               <motion.h2
               variants={fadeIn('up')}
               initial="hidden"
               whileInView={'show'}
-              viewport={{once: false, amount: 0.2}}
+              viewport={{once: false, amount: 0.3}}
               className="lg:text-6xl md:text-5xl text-5xl text-white font-teko uppercase mb-5 md:mb-10">{description}</motion.h2>
               <p
               className="text-white mb-5 md:mb-10">
