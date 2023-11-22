@@ -47,7 +47,12 @@ const Portfolio = () => {
             whileInView={'show'}
             viewport={{once: false, amount: 0.2}}
             src={src} alt="" className="w-full h-[550px] mx-auto object-cover"></motion.img>
-            <div className="absolute flex items-left justify-center top-5 left-5 flex-col w-3/5 md:w-2/5">
+            <motion.div
+              variants={fadeIn('up')}
+              initial="hidden"
+              whileInView={'show'}
+              viewport={{once: false, amount: 0.2}}
+            className="absolute flex items-left justify-center top-5 left-5 flex-col w-3/5 md:w-2/5">
               <motion.h2
               variants={fadeIn('up')}
               initial="hidden"
@@ -66,25 +71,18 @@ const Portfolio = () => {
               whileInView={'show'}
               viewport={{once: false, amount: 0.2}}
               className="lg:text-6xl md:text-5xl text-5xl text-white font-teko uppercase mb-5 md:mb-10">{description}</motion.h2>
-              <motion.p
-              variants={fadeIn('up')}
-              initial="hidden"
-              whileInView={'show'}
-              viewport={{once: false, amount: 0.2}}
-              className="text-white mb-5 md:mb-10">{explanation}</motion.p>
-              <motion.button
-              variants={fadeIn('up')}
-              initial="hidden"
-              whileInView={'show'}
-              viewport={{once: false, amount: 0.2}}
+              <p
+              className="text-white mb-5 md:mb-10">
+              {explanation}
+              </p>
+              <button
               className="sm:w-2/5 font-teko font-thin tracking-widest border-2 border-white px-6 py-2 duration-300 hover:bg-white hover:text-black">
                 <a
                 href={href}
                 target="_blank"
                 rel="noreferrer">VIEW WEBSITE</a>
-                </motion.button>
-
-            </div>
+                </button>
+            </motion.div>
           </div>
           ))}
         </div>
