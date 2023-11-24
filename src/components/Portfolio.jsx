@@ -23,7 +23,7 @@ const Portfolio = () => {
       description: "Creating online presence for the animals",
       explanation: "I helped dian create an online platform for her work as an dog fosterer and saver.",
       title:"Rescue sanctuary",
-      href: "https://dians-sanctuary.netlify.app/",
+      href: "https://dharmawangsa.netlify.app/",
     },
   ];
 
