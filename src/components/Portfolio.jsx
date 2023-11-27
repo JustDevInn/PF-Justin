@@ -1,5 +1,5 @@
 import React from "react";
-import beers from "../assets/portfolio/craftsman.jpg";
+import beers from "../assets/portfolio/beerbrewer.jpg";
 import ibussanctuary from "../assets/portfolio/donatedog2.jpg";
 import {motion} from 'framer-motion';
 import {fadeIn} from '../variants';
