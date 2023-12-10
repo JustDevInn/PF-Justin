@@ -1,6 +1,7 @@
 import React from "react";
 import beers from "../assets/portfolio/beerbrewer.jpg";
 import ibussanctuary from "../assets/portfolio/donatedog2.jpg";
+import royalmarines from "../assets/portfolio/royalmarines.jpg";
 import {motion} from 'framer-motion';
 import {fadeIn} from '../variants';
 
@@ -8,6 +9,16 @@ const Portfolio = () => {
   const portfolios = [
     {
       id: 1,
+      src: royalmarines,
+      role: "Designer and developer",
+      description: "Mission movement forges the elite",
+      explanation: "Created an online platform for those looking to create a future in the special forces.",
+      title:"MISSION MOVEMENT",
+      titleFontStyle: "font-teko",
+      href:"https://mission-movement.netlify.app",
+    },
+    {
+      id: 2,
       src: beers,
       role: "Designer and developer",
       description: "Showcasing full stack capabilities",
@@ -17,7 +28,7 @@ const Portfolio = () => {
       href:"https://github.com/JustDevInn/PxlWidgets-Beer-Assignment-Reactjs",
     },
     {
-      id: 2,
+      id: 3,
       src: ibussanctuary,
       role: "Designer and developer",
       description: "Creating online presence for the animals",
