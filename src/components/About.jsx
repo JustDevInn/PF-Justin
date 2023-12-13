@@ -22,7 +22,7 @@ const About = () => {
 <div className="overflow-auto">
         <p className=" text-2xl font-teko inline uppercase tracking-wider text-white">About Justin Peeters</p>
         <p className="text-l italic mt-5 ">
-        Justin is a Bali based developer with over four years of diving into this world, he’s found his passion in crafting websites that not only stand out visually but also offer an experience that resonates with users on a personal level.
+        Justin is a developer & designer with over four years of diving into this world, he’s found his passion in crafting websites that not only stand out visually but also offer an experience that resonates with users on a personal level.
         <br></br><br></br>
         Creating platforms that make a real difference is his compass. He thrives on the challenge of designing interfaces that not only captivate but also contribute positively to people's lives.
         <br></br><br></br>
