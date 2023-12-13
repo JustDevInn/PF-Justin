@@ -10,7 +10,7 @@ const Contact = () => {
     >
       <div className="flex flex-col p-4 justify-center max-w-screen-lg mx-auto">
         <motion.div
-        variants={fadeIn('up')}
+        variants={fadeIn('right')}
         initial="hidden"
         whileInView={'show'}
         viewport={{once: false, amount: 0.2}}

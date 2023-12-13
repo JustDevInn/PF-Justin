@@ -65,13 +65,13 @@ const Portfolio = () => {
             viewport={{once: false, amount: 0.1}}
             className="absolute flex items-left justify-center top-5 left-5 flex-col w-3/5 md:w-2/5">
               <motion.h2
-              variants={fadeIn('up')}
+              variants={fadeIn('left')}
               initial="hidden"
               whileInView={'show'}
               viewport={{once: false, amount: 0.1}}
               class={`text-4xl text-white ${titleFontStyle} mb-10`}>{title}</motion.h2>
               <motion.p
-              variants={fadeIn('up')}
+              variants={fadeIn('right')}
               initial="hidden"
               whileInView={'show'}
               viewport={{once: false, amount: 0.3}}
