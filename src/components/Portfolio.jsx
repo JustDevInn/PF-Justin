@@ -40,18 +40,18 @@ const Portfolio = () => {
 
   return (
     <div
-      name="portfolio"
-      className="min-h-screen bg-gradient-to-b from-gray-900 via-black to-gray-900 w-full text-white">
-      <div className="max-w-screen-lg mx-auto flex flex-col justify-center w-full h-full pt-20 pb-20">
+      name="work"
+      className="min-h-screen py-20 bg-gradient-to-b from-gray-900 via-black to-gray-900 w-full text-[#c6c6c6]">
+      <div className="max-w-screen-lg mx-auto flex flex-col justify-center w-full h-full">
         <div
-        className="">
+        className="py-20">
           <p className="pl-10 text-6xl uppercase font-teko tracking-wider inline">
             Work
           </p>
         </div>
-        <div className="px-5 grid sm:grid-cols-1 gap-8 sm:px-0 mt-10">
+        <div className="px-5 grid sm:grid-cols-1 gap-8 sm:px-0">
           {portfolios.map(({ id, src, title, href,role, description, explanation, titleFontStyle }) => (
-          <div key={id} className="relative">
+          <div key={id} className="relative h-screen">
             <motion.img
             variants={fadeIn('up')}
             initial="hidden"
@@ -83,7 +83,7 @@ const Portfolio = () => {
               viewport={{once: false, amount: 0.3}}
               className="lg:text-6xl md:text-5xl text-5xl text-white font-teko uppercase mb-5 md:mb-10">{description}</motion.h2>
               <p
-              className="text-white mb-5 md:mb-10">
+              className="text-[#c6c6c6] mb-5 md:mb-10">
               {explanation}
               </p>
               <button

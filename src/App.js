@@ -5,10 +5,12 @@ import Home from "./components/Home";
 import NavBar from "./components/NavBar";
 import Portfolio from "./components/Portfolio";
 import SocialLinks from "./components/SocialLinks";
+import PreLoader from './components/PreLoader';
 
 function App() {
   return (
     <div>
+      <PreLoader />
       <NavBar />
       <Home />
       <Portfolio />

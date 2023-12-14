@@ -12,15 +12,15 @@ const NavBar = () => {
     },
     {
       id: 2,
-      link: "about",
+      link: "work",
     },
     {
       id: 3,
-      link: "portfolio",
+      link: "experience",
     },
     {
       id: 4,
-      link: "experience",
+      link: "about",
     },
     {
       id: 5,
@@ -29,7 +29,7 @@ const NavBar = () => {
   ];
 
   return (
-    <div className="flex z-50 justify-between sm:w-full items-center w-full h-20 px-4 text-white bg-black fixed font-teko text-xl">
+    <div className="flex z-50 justify-between sm:w-full items-center w-full h-20 px-4 text-[#c6c6c6] bg-transparent fixed font-teko text-xl">
       <div>
       <h1 className="text-3xl md:ml-20 lg:ml-40 font-teko">JUSTIN PEETERS</h1>
       </div>
