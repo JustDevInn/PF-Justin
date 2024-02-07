@@ -24,7 +24,7 @@ const About = () => {
         <br></br><br></br>
         Beyond the digital realm, he finds solace and strength in the self-discipline of gymnastic strength training—a practice that resonates from his experiences in the Royal Marine Corps. Gaming has been a lifelong passion, but nothing beats the thrill of venturing into nature's embrace, discovering new horizons and hidden gems.
         <br></br><br></br>
-        Recently, my wife and I made the bold decision to call Bali home. The welcoming climate and the warmth exuded by the local community have infused our lives with a daily dose of joy.
+        Recently, my wife and I made the bold decision to temporarily live abroad. The welcoming climate and the warmth exuded by the local community have infused our lives with a daily dose of joy.
         <br></br><br></br>
         He's on journey of merging technology with artistry, creating digital landscapes that leave a lasting impact and offer an immersive experience.
         </p>
