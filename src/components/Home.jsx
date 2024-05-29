@@ -56,7 +56,7 @@ const Home = () => {
       className="px-10 flex flex-col justify-center">
         <h5
         className='text-5xl lg:text-7xl text-white font-teko py-4'>
-        Justin is a developer and UI designer who loves to create unique and inspiring platforms.
+        I am a developer and UI designer who loves to create unique and inspiring platforms.
         </h5>
         <p className=" w-1/3 md:w-1/5 border-b-2 border-orange-300 mt-10 mb-10"></p>
           <p

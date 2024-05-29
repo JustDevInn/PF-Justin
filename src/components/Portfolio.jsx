@@ -32,7 +32,7 @@ const Portfolio = () => {
       src: ibussanctuary,
       role: "Designer and developer",
       description: "Creating online presence for the animals",
-      explanation: "I helped dian create an online platform for her work as an dog fosterer and saver.",
+      explanation: "I helped Dian crate an online platform to promote her passion for rescuing and fostering dogs",
       title:"Rescue sanctuary",
       href: "https://dharmawangsa.netlify.app/",
     },
