@@ -66,9 +66,14 @@ const Home = () => {
           <span className="text-orange-300">freelancer</span>.
           </p>
           <div>
-          <Link to="portfolio" smooth duration={500} className='group text-white border border-white w-fit px-6 py-3 my-2 flex items-center cursor-pointer'>
-                 Portfolio
-                 <span className='group-hover:rotate-90 duration-300 hover:text-orange-300'> <MdOutlineKeyboardArrowRight size={25} className='ml-1'/> </span>
+          <Link
+          to="portfolio"
+          smooth duration={500}
+          className='group text-white border border-white w-fit px-6 py-3 my-2 flex items-center cursor-pointer'>
+            Portfolio
+            <span className='group-hover:rotate-90 duration-300 hover:text-orange-300'>
+              <MdOutlineKeyboardArrowRight size={25} className='ml-1'/>
+            </span>
           </Link>
           </div>
         </div>
@@ -77,6 +82,7 @@ const Home = () => {
           <img
             src={HeroImage}
             alt="my profile"
+            loading="lazy"
             className='w-full md:mx-auto '
           />
         </div>

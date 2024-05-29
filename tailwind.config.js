@@ -2,6 +2,9 @@ module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
+      textShadow: {
+        'outline': '0 0 3px #000000',
+      },
       colors: {
         'award-orange': '#d64b27',
       },
@@ -12,5 +15,7 @@ module.exports = {
       berk: ['Berkshire Swash', 'serif'],
     },
   },
-  plugins: [],
+  plugins: [
+    require('tailwindcss-textshadow')
+  ],
 };

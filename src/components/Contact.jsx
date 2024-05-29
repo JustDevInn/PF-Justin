@@ -2,6 +2,7 @@ import React from "react";
 import {motion} from 'framer-motion';
 import {fadeIn} from '../variants';
 
+
 const Contact = () => {
   return (
     <div
@@ -18,9 +19,9 @@ const Contact = () => {
           <p className="text-6xl uppercase font-teko tracking-wider inline ">
             Contact
           </p>
-          <p className="py-6 text-gray-300 px-5">If you want to chat, train, or grab a drink and talk web design, don't hesitate shoot me an email.</p>
+          <p className="py-6 text-gray-300 px-5">If you want to chat or grab a drink and talk web design, don't hesitate shoot me an email.</p>
         </motion.div>
-
+{/* form */}
         <div
         className=" flex justify-center items-center">
           <motion.form
@@ -53,12 +54,46 @@ const Contact = () => {
               required
             ></textarea>
 
-            <button className="my-5 sm:w-2/5 font-teko font-thin tracking-widest border-2 border-white px-6 py-2 duration-300">
+            <button className="my-5 sm:w-2/5 font-teko font-thin tracking-widest border-2 border-white px-6 py-2 duration-300 hover:bg-white hover:text-black">
               Let's talk
             </button>
           </motion.form>
         </div>
+        {/* form ending */}
       </div>
+    <footer className="h-[350px] md:h-[450px] flex flex-col p-4 justify-center max-w-screen-lg mx-auto">
+  {/* details */}
+  <div className="w-full flex flex-row justify-between md:flex-col mt-10">
+      <h1 className="text-6xl uppercase font-teko tracking-wider inline ">
+      Details
+      </h1>
+    <div className="lg:px-10 flex flex-col justify-start md:justify-between md:flex-row text-xs md:text-lg text-white">
+      <div className="mb-2">
+        <h5 className="font-bold uppercase tracking-widest">Email</h5>
+        <a
+        href="mailto:Peeters.justin@yahoo.com"
+        className="font-thin">Peeters.justin@yahoo.com</a>
+      </div>
+      <div className="mb-2">
+        <h5 className="font-bold uppercase tracking-widest">Phone</h5>
+        <p className="font-thin">+361 25 18 34 59</p>
+      </div>
+      <div className="mb-2">
+        <h5 className="font-bold uppercase tracking-widest">Social</h5>
+        <a
+        href="http://www.instagram.com/justinpeeters"
+        target="blank"
+        className="font-thin"
+        >@justinpeeters</a>
+      </div>
+    </div>
+  </div>
+    {/* copyright + kvk */}
+    <div className="mt-10 w-full flex flex-row justify-between text-white font-thin text-[8px] lg:text-[10px] tracking-widest">
+      <p className="">Copyright 2023 all rights reserved.</p>
+      <p>KVK: <span className="font-medium">Justin Peeters Coaching 89798690899</span></p>
+    </div>
+      </footer>
     </div>
   );
 };

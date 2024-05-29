@@ -12,7 +12,7 @@ const Portfolio = () => {
       src: royalmarines,
       role: "Designer and developer",
       description: "Mission movement forges the elite",
-      explanation: "Created an online platform for those looking to create a future in the special forces.",
+      explanation: "A platform to guide and assist those looking to create a future in the special forces.",
       title:"MISSION MOVEMENT",
       titleFontStyle: "font-teko",
       href:"https://mission-movement.netlify.app",
@@ -40,17 +40,17 @@ const Portfolio = () => {
 
   return (
     <div
-      name="work"
+      name="portfolio"
       className="min-h-screen py-20 bg-gradient-to-b from-gray-900 via-black to-gray-900 w-full text-[#c6c6c6]">
       <div className="max-w-screen-lg mx-auto flex flex-col justify-center w-full h-full">
         <div
         className="py-20">
           <p className="pl-10 text-6xl uppercase font-teko tracking-wider inline">
-            Work
+            Portfolio
           </p>
         </div>
         <div className="px-5 grid sm:grid-cols-1 gap-8 sm:px-0">
-          {portfolios.map(({ id, src, title, href,role, description, explanation, titleFontStyle }) => (
+          {portfolios.map(({ id, src, title, href,role , description, explanation, titleFontStyle }) => (
           <div key={id} className="relative h-screen">
             <motion.img
             variants={fadeIn('up')}
@@ -75,7 +75,7 @@ const Portfolio = () => {
               initial="hidden"
               whileInView={'show'}
               viewport={{once: false, amount: 0.3}}
-              className="text-gray-300 font-thin font-teko tracking-wider mb-5 md:mb-10">{role}</motion.p>
+              className="text-gray-300 font-thin font-teko tracking-wider mb-5 md:mb-10 text-shadow-outline">{role}</motion.p>
               <motion.h2
               variants={fadeIn('up')}
               initial="hidden"
@@ -83,16 +83,17 @@ const Portfolio = () => {
               viewport={{once: false, amount: 0.3}}
               className="lg:text-6xl md:text-5xl text-5xl text-white font-teko uppercase mb-5 md:mb-10">{description}</motion.h2>
               <p
-              className="text-[#c6c6c6] mb-5 md:mb-10">
+              className="text-[#c6c6c6] mb-5 md:mb-10 text-shadow-outline">
               {explanation}
               </p>
-              <button
-              className="sm:w-2/5 font-teko font-thin tracking-widest border-2 border-white px-6 py-2 duration-300 hover:bg-white hover:text-black">
                 <a
                 href={href}
                 target="_blank"
-                rel="noreferrer">VIEW WEBSITE</a>
-                </button>
+                rel="noreferrer">
+                  <button
+                  className="sm:w-2/5 font-teko font-thin tracking-widest border-2 border-white bg-white text-black px-6 py-2 duration-300 hover:bg-transparent hover:text-white">
+                    VIEW WEBSITE
+                  </button></a>
             </motion.div>
           </div>
           ))}
