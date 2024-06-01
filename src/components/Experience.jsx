@@ -161,7 +161,7 @@ const Experience = () => {
         </div>
 
     <div className="">
-      <ul className="grid grid-cols-6 gap-4">
+      <ul className="grid grid-cols-4 lg:grid-cols-6 gap-4">
         {techs.map(({ id, child, }) => (
           <motion.li
               variants={fadeIn('up')}
