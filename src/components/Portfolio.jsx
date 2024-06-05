@@ -2,6 +2,8 @@ import React from "react";
 import beers from "../assets/portfolio/beerbrewer.jpg";
 import ibussanctuary from "../assets/portfolio/donatedog2.jpg";
 import royalmarines from "../assets/portfolio/royalmarines.jpg";
+import photographer1 from "../assets/portfolio/photo2.png";
+import thevoidtattoo from "../assets/portfolio/thevoidtattoo2.png";
 import {motion} from 'framer-motion';
 import {fadeIn} from '../variants';
 
@@ -31,10 +33,34 @@ const Portfolio = () => {
       id: 3,
       src: ibussanctuary,
       role: "Designer and developer",
-      description: "Creating online presence for the animals",
-      explanation: "I helped Dian crate an online platform to promote her passion for rescuing and fostering dogs",
-      title:"Rescue sanctuary",
+      description: "Creating online presence for the dogs in need",
+      explanation: "A potential online platform to help animal rescues reach worldwide.",
+      title:"Paws of Hope",
       href: "https://dharmawangsa.netlify.app/",
+    },
+    {
+      id: 4,
+      src: photographer1,
+      role: "Developer",
+      description: "Photographer & Filmmaker",
+      explanation: "An ellegant, modern and playfull design for a portfolio website",
+      title:"Alina Lee",
+      titleTextColor: "text-black",
+      textColor: "text-black",
+      titleFontStyle: "font-playfair",
+      href: "https://photographer-pf.vercel.app/",
+    },
+    {
+      id: 5,
+      src: thevoidtattoo,
+      role: "Developer",
+      description: "Artistic website",
+      explanation: "A modern and rough design for a freelance tattoo artist",
+      title:"The Void Tattoo",
+      titleTextColor: "text-black",
+      textColor: "text-white",
+      titleFontStyle: "font-rozha",
+      href: "tattoo-website-pkdw.vercel.app",
     },
   ];
 
@@ -50,7 +76,7 @@ const Portfolio = () => {
           </p>
         </div>
         <div className="px-5 grid sm:grid-cols-1 gap-8 sm:px-0">
-          {portfolios.map(({ id, src, title, href,role , description, explanation, titleFontStyle }) => (
+          {portfolios.map(({ id, src, title, href,role , description, explanation, textColor,titleTextColor, titleFontStyle }) => (
           <div key={id} className="relative h-screen">
             <motion.img
             variants={fadeIn('up')}
@@ -69,21 +95,21 @@ const Portfolio = () => {
               initial="hidden"
               whileInView={'show'}
               viewport={{once: false, amount: 0.1}}
-              class={`text-4xl text-white ${titleFontStyle} mb-10`}>{title}</motion.h2>
+              className={`text-4xl ${titleTextColor} ${titleFontStyle} mb-10`}>{title}</motion.h2>
               <motion.p
               variants={fadeIn('right')}
               initial="hidden"
               whileInView={'show'}
               viewport={{once: false, amount: 0.3}}
-              className="text-gray-300 font-thin font-teko tracking-wider mb-5 md:mb-10 text-shadow-outline">{role}</motion.p>
+              className={`text-white text-shadow-outline font-thin font-teko tracking-wider mb-5 md:mb-10`}>{role}</motion.p>
               <motion.h2
               variants={fadeIn('up')}
               initial="hidden"
               whileInView={'show'}
               viewport={{once: false, amount: 0.3}}
-              className="lg:text-6xl md:text-5xl text-5xl text-white font-teko uppercase mb-5 md:mb-10">{description}</motion.h2>
+              className={`lg:text-6xl md:text-5xl text-5xl text-white ${textColor} font-teko uppercase mb-5 md:mb-10`}>{description}</motion.h2>
               <p
-              className="text-[#c6c6c6] mb-5 md:mb-10 text-shadow-outline">
+              className="text-white mb-5 md:mb-10 text-shadow-outline">
               {explanation}
               </p>
                 <a

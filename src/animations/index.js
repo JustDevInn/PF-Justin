@@ -336,21 +336,24 @@ export const preLoaderAnim = () => {
       opacity: 1,
       ease: "Power3.easeOut",
     })
+    // transition in
     .from(".texts-container span", {
       duration: 2.0,
       delay: 1,
       opacity: 0,
       filter: "blur(10px)",
       ease: "Power3.easeOut",
-      stagger: 0.4,
+      stagger: 0.2,
     })
+    // visibility duration
     .to(".texts-container span", {
-      duration: 2.0,
+      duration: 0.2,
       opacity: 1,
       filter: "blur(0px)",
       ease: "Power3.easeOut",
       stagger: 0.4,
     })
+    // transition out
     .to(".texts-container span", {
       duration: 2.0,
       opacity: 0,

@@ -13,9 +13,11 @@ module.exports = {
       signature: ["Great Vibes"],
       teko: ['Teko', 'sans-serif'],
       berk: ['Berkshire Swash', 'serif'],
+      rozha: 'Rozha One',
+      playfair: 'Playfair Display',
     },
   },
   plugins: [
     require('tailwindcss-textshadow')
-  ],
+  ]
 };
