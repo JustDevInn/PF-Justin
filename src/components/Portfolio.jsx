@@ -60,7 +60,7 @@ const Portfolio = () => {
       titleTextColor: "text-black",
       textColor: "text-white",
       titleFontStyle: "font-rozha",
-      href: "tattoo-website-pkdw.vercel.app",
+      href: "tattoo-website-vuqi.vercel.app",
     },
   ];
 
