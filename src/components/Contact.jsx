@@ -7,7 +7,7 @@ const Contact = () => {
   return (
     <div
       name="contact"
-      className="px-5 w-full h-50vh bg-gradient-to-b from-black to-gray-900 text-white"
+      className="px-5 w-full md:pt-80 h-50vh bg-gradient-to-b from-black to-gray-900 text-white"
     >
       <div className="flex flex-col p-4 justify-center max-w-screen-lg mx-auto">
         <motion.div
@@ -19,7 +19,7 @@ const Contact = () => {
           <p className="text-6xl uppercase font-teko tracking-wider inline ">
             Contact
           </p>
-          <p className="py-6 text-gray-300 px-5">If you want to chat or grab a drink and talk web design, don't hesitate shoot me an email.</p>
+          <p className="py-6 text-gray-300 px-5">If you’re looking to enhance your online presence, collaborate on a project, or simply chat over a coffee about web design, let’s connect! Feel free to reach out via email, phone, or LinkedIn—I’d love to discuss potential opportunities or brainstorm ideas together.</p>
         </motion.div>
 {/* form */}
         <div
@@ -93,7 +93,7 @@ const Contact = () => {
     {/* copyright + kvk */}
     <div className="mt-10 w-full flex flex-row justify-between text-white font-thin text-[8px] lg:text-[10px] tracking-widest">
       <p className="">Copyright 2023 all rights reserved.</p>
-      <p>KVK: <span className="font-medium">Justin Peeters Coaching 89798690899</span></p>
+      <p>KVK: <span className="font-medium">Justin Peeters Development 89798690899</span></p>
     </div>
       </footer>
     </div>

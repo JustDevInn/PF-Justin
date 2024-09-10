@@ -3,55 +3,107 @@ import { FaBars, FaTimes, FaCircle, FaRegCircle } from "react-icons/fa";
 import { Link, Events, scrollSpy } from "react-scroll";
 
 const NavBar = () => {
-  // setting mobile nav
   const [nav, setNav] = useState(false);
-  const [activeLink, setActiveLink] = useState(null);
+  const [activeLink, setActiveLink] = useState(null); // Active section in view
+  const [hoveredLink, setHoveredLink] = useState(null); // Hovered section
+  const [visibleLink, setVisibleLink] = useState(null); // Track which text is visible
 
   const links = [
     { id: 1, link: "home" },
     { id: 2, link: "portfolio" },
-    { id: 3, link: "experience" },
+    { id: 3, link: "technologies" },
     { id: 4, link: "about" },
     { id: 5, link: "contact" },
   ];
 
   useEffect(() => {
-    Events.scrollEvent.register('begin', function() {
+    // Register scroll events and update the scroll spy
+    Events.scrollEvent.register("begin", function () {
       console.log("begin", arguments);
     });
 
-    Events.scrollEvent.register('end', function() {
+    Events.scrollEvent.register("end", function () {
       console.log("end", arguments);
     });
 
     scrollSpy.update();
 
     return () => {
-      Events.scrollEvent.remove('begin');
-      Events.scrollEvent.remove('end');
+      Events.scrollEvent.remove("begin");
+      Events.scrollEvent.remove("end");
     };
   }, []);
 
+  // Handle showing and hiding the visibleLink based on hover and active section
+  useEffect(() => {
+    let timeoutId;
+
+    // Show the hovered or active link text immediately
+    if (hoveredLink || activeLink) {
+      setVisibleLink(hoveredLink || activeLink);
+
+      // Set a timeout to hide the text after 2 seconds only if no hover or active section
+      timeoutId = setTimeout(() => {
+        setVisibleLink(null); // Hide the text after 2 seconds
+      }, 2000); // 2-second delay
+    }
+
+    return () => clearTimeout(timeoutId); // Cleanup timeout
+  }, [hoveredLink, activeLink]);
+
   return (
-    <div className="flex z-50 justify-end sm:w-full items-center w-full text-[#c6c6c6] bg-transparent fixed font-teko text-xl">
+    <div className="flex z-50 justify-end sm:w-full items-center w-full text-gray-300 bg-transparent fixed text-md">
       {/* Desktop navbar */}
       <div className="hidden lg:flex flex-col top-[35%] right-0 fixed">
         <ul className="hidden lg:flex flex-col gap-y-5">
           {links.map(({ id, link }) => (
             <li
               key={id}
-              className="px-4 cursor-pointer uppercase tracking-wide font-medium hover:scale-105 duration-20 hover:text-orange-300"
+              className="relative px-4 cursor-pointer tracking-wide capitalize font-medium"
+              onMouseEnter={() => {
+                setHoveredLink(link); // Hover over link
+                clearTimeout();
+              }}
+              onMouseLeave={() => {
+                setHoveredLink(null); // Stop hover
+              }}
             >
               <Link
                 to={link}
-                smooth
+                smooth={true}
                 duration={500}
-                spy
-                onSetActive={setActiveLink}
+                spy={true}
+                offset={-80}
+                isDynamic={true}
+                onSetActive={() => {
+                  setActiveLink(link); // When the section becomes active
+                  clearTimeout();
+                  setTimeout(() => {
+                    setVisibleLink(null); // Hide after 2 seconds
+                  }, 2000);
+                }}
                 className="flex justify-center items-center"
               >
                 {activeLink === link ? <FaRegCircle /> : <FaCircle />}
               </Link>
+              
+              {/* Section name appears/disappears */}
+              <div
+  className={`absolute top-0 right-11 transition-opacity duration-1000 ease-in-out ${
+    visibleLink === link ? 'opacity-100' : 'opacity-0'
+  }`}
+>
+  <Link
+    to={link}
+    smooth
+    duration={500}
+    className="ml-2 whitespace-nowrap hover:underline text-white transition-opacity duration-1000 ease-in-out"
+  >
+    {link}
+  </Link>
+</div>
+
+
             </li>
           ))}
         </ul>
@@ -73,15 +125,23 @@ const NavBar = () => {
           {links.map(({ id, link }) => (
             <li
               key={id}
-              className="px-4 cursor-pointer py-6 text-4xl hover:scale-105 uppercase tracking-wide duration-20 hover:text-orange-300"
+              className="px-4 cursor-pointer py-6 text-4xl hover:scale-105 uppercase tracking-wide duration-300 hover:text-orange-300"
             >
               <Link
                 onClick={() => setNav(!nav)}
                 to={link}
-                smooth
+                smooth={true}
                 duration={500}
-                spy
-                onSetActive={setActiveLink}
+                spy={true}
+                offset={-80}
+                isDynamic={true}
+                onSetActive={() => {
+                  setActiveLink(link); // When the section becomes active
+                  setVisibleLink(link);
+                  setTimeout(() => {
+                    setVisibleLink(null); // Hide after 2 seconds
+                  }, 2000);
+                }}
               >
                 {link}
               </Link>

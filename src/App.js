@@ -10,7 +10,7 @@ import PreLoader from './components/PreLoader';
 function App() {
   return (
     <div>
-      <PreLoader />
+      {/* <PreLoader /> */}
       <NavBar />
       <Home />
       <Portfolio />

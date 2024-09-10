@@ -55,15 +55,14 @@ const Home = () => {
       <div
       className="px-10 flex flex-col justify-center">
         <h5
-        className='text-5xl lg:text-7xl text-white font-teko py-4'>
-        I am a developer and UI designer who loves to create unique and inspiring platforms.
+        className='text-xl lg:text-4xl text-white font-teko py-4'>
+        Crafting websites that stand out with style and precision, bringing ideas to life through unique, memorable digital experiences.
         </h5>
         <p className=" w-1/3 md:w-1/5 border-b-2 border-orange-300 mt-10 mb-10"></p>
           <p
         className="text-gray-400 py-4 max-w-md">
-          I combine digital design and programming to bring ideas to life.
-          Currently, I'm working as a <br></br>
-          <span className="text-orange-300">freelancer</span>.
+          Every project is designed with attention to detail, ensuring a <span className="text-orange-300">personalized</span> touch that resonates with the brand<br></br>
+          .
           </p>
           <div>
           <Link

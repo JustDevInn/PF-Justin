@@ -2,8 +2,8 @@ import React from "react";
 import beers from "../assets/portfolio/beerbrewer.jpg";
 import ibussanctuary from "../assets/portfolio/donatedog2.jpg";
 import royalmarines from "../assets/portfolio/royalmarines.jpg";
-import photographer1 from "../assets/portfolio/photo2.png";
-import thevoidtattoo from "../assets/portfolio/thevoidtattoo2.png";
+import photographer1 from "../assets/portfolio/annelie.png";
+import thevoidtattoo from "../assets/portfolio/bg.png";
 import {motion} from 'framer-motion';
 import {fadeIn} from '../variants';
 
@@ -13,7 +13,7 @@ const Portfolio = () => {
       id: 1,
       src: royalmarines,
       role: "Designer and developer",
-      description: "Mission movement forges the elite",
+      description: "Mission movement: forging the elite",
       explanation: "A platform to guide and assist those looking to create a future in the special forces.",
       title:"MISSION MOVEMENT",
       titleFontStyle: "font-teko",
@@ -23,7 +23,7 @@ const Portfolio = () => {
       id: 2,
       src: beers,
       role: "Designer and developer",
-      description: "Showcasing full stack capabilities",
+      description: "Beer brewery app",
       explanation: "This was a project that I did for a software development company, the purpose was displaying the connection of front and back end.",
       title:"The Brewery",
       titleFontStyle: "font-berk",
@@ -33,7 +33,7 @@ const Portfolio = () => {
       id: 3,
       src: ibussanctuary,
       role: "Designer and developer",
-      description: "Creating online presence for the dogs in need",
+      description: "An online presence for the souls in need",
       explanation: "A potential online platform to help animal rescues reach worldwide.",
       title:"Paws of Hope",
       href: "https://dharmawangsa.netlify.app/",
@@ -42,8 +42,8 @@ const Portfolio = () => {
       id: 4,
       src: photographer1,
       role: "Developer",
-      description: "Photographer & Filmmaker",
-      explanation: "An ellegant, modern and playfull design for a portfolio website",
+      description: "Creative portfolio",
+      explanation: "A minimalistic yet visually striking portfolio that showcases the artistry of tattoo design. With clean lines and modern aesthetics, it delivers a bold digital presence while maintaining a refined, professional look.",
       title:"Alina Lee",
       titleTextColor: "text-black",
       textColor: "text-black",
@@ -54,10 +54,10 @@ const Portfolio = () => {
       id: 5,
       src: thevoidtattoo,
       role: "Developer",
-      description: "Artistic website",
-      explanation: "A modern and rough design for a freelance tattoo artist",
+      description: "Bold and edgy tattoo artistry.",
+      explanation: "A rugged and contemporary design that reflects the bold creativity and individuality of a freelance tattoo artist, creating a striking digital presence.",
       title:"The Void Tattoo",
-      titleTextColor: "text-black",
+      titleTextColor: "text-white",
       textColor: "text-white",
       titleFontStyle: "font-rozha",
       href: "http://tattoo-website-vuqi.vercel.app",
