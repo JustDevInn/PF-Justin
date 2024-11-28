@@ -7,7 +7,7 @@ import thevoidtattoo from "../assets/portfolio/bg.png";
 import removehero from "../assets/portfolio/remove-hero.png";
 // mobile images
 import removeheroMobile from "../assets/portfolio/images-mobile/removemobile.png";
-import mmvmtmobile from "../assets/portfolio/images-mobile/mmvmtmobile.png";
+import mmvmtmobile1 from "../assets/portfolio/images-mobile/mmvmtmobile1.png";
 import pawsofhopemobile from "../assets/portfolio/images-mobile/pawsofhopemobile.png";
 import photomobile1 from "../assets/portfolio/images-mobile/photomobile1.png";
 import { motion } from 'framer-motion';
@@ -50,7 +50,7 @@ const Portfolio = () => {
     {
       id: 2,
       src: royalmarines,
-      srcMobile: mmvmtmobile,
+      srcMobile: mmvmtmobile1,
       role: "Designer and developer",
       description: "Mission movement: forging the elite",
       explanation: "A platform to guide and assist those looking to create a future in the special forces.",
@@ -148,49 +148,60 @@ const Portfolio = () => {
                   </div>
                 </>
               ) : (
-                <motion.div
-                  variants={fadeIn("up")}
-                  initial="hidden"
-                  whileInView={"show"}
-                  viewport={{ once: false, amount: 0.1 }}
-                  className="absolute flex items-left justify-center top-5 left-5 flex-col w-3/5 md:w-2/5"
-                >
-                  <motion.h2
-                    variants={fadeIn("left")}
-                    initial="hidden"
-                    whileInView={"show"}
-                    viewport={{ once: false, amount: 0.1 }}
-                    className={`text-4xl ${titleTextColor} ${titleFontStyle} mb-10`}
-                  >
-                    {title}
-                  </motion.h2>
-                  <motion.p
-                    variants={fadeIn("right")}
-                    initial="hidden"
-                    whileInView={"show"}
-                    viewport={{ once: false, amount: 0.3 }}
-                    className={`text-white text-shadow-outline font-thin font-teko tracking-wider mb-5 md:mb-10`}
-                  >
-                    {role}
-                  </motion.p>
-                  <motion.h2
+                <>
+                  <motion.img
                     variants={fadeIn("up")}
                     initial="hidden"
                     whileInView={"show"}
-                    viewport={{ once: false, amount: 0.3 }}
-                    className={`lg:text-6xl md:text-5xl text-5xl ${textColor} font-teko uppercase mb-5 md:mb-10`}
+                    viewport={{ once: false, amount: 0.1 }}
+                    src={src}
+                    alt=""
+                    className="w-full h-full object-cover"
+                  />
+                  <motion.div
+                    variants={fadeIn("up")}
+                    initial="hidden"
+                    whileInView={"show"}
+                    viewport={{ once: false, amount: 0.1 }}
+                    className="absolute flex items-left justify-center top-5 left-5 flex-col w-3/5 md:w-2/5"
                   >
-                    {description}
-                  </motion.h2>
-                  <p className="text-white mb-5 md:mb-10 text-shadow-outline">
-                    {explanation}
-                  </p>
-                  <a href={href} target="_blank" rel="noreferrer">
-                    <button className="sm:w-2/5 font-teko font-thin tracking-widest border-2 border-white bg-white text-black px-6 py-2 duration-300 hover:bg-transparent hover:text-white">
-                      VIEW WEBSITE
-                    </button>
-                  </a>
-                </motion.div>
+                    <motion.h2
+                      variants={fadeIn("left")}
+                      initial="hidden"
+                      whileInView={"show"}
+                      viewport={{ once: false, amount: 0.1 }}
+                      className={`text-4xl ${titleTextColor} ${titleFontStyle} mb-10`}
+                    >
+                      {title}
+                    </motion.h2>
+                    <motion.p
+                      variants={fadeIn("right")}
+                      initial="hidden"
+                      whileInView={"show"}
+                      viewport={{ once: false, amount: 0.3 }}
+                      className={`text-white text-shadow-outline font-thin font-teko tracking-wider mb-5 md:mb-10`}
+                    >
+                      {role}
+                    </motion.p>
+                    <motion.h2
+                      variants={fadeIn("up")}
+                      initial="hidden"
+                      whileInView={"show"}
+                      viewport={{ once: false, amount: 0.3 }}
+                      className={`lg:text-6xl md:text-5xl text-5xl ${textColor} font-teko uppercase mb-5 md:mb-10`}
+                    >
+                      {description}
+                    </motion.h2>
+                    <p className="text-white mb-5 md:mb-10 text-shadow-outline">
+                      {explanation}
+                    </p>
+                    <a href={href} target="_blank" rel="noreferrer">
+                      <button className="sm:w-2/5 font-teko font-thin tracking-widest border-2 border-white bg-white text-black px-6 py-2 duration-300 hover:bg-transparent hover:text-white">
+                        VIEW WEBSITE
+                      </button>
+                    </a>
+                  </motion.div>
+                </>
               )}
             </div>
           ))}
