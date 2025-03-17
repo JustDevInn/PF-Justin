@@ -9,7 +9,7 @@ const SocialLinks = () => {
       id: 1,
       child: (
         <>
-          LinkedIn <FaLinkedin size={30} />
+          LinkedIn <FaLinkedin size={30} className="transition duration-300 hover:text-white" />
         </>
       ),
       href: "https://www.linkedin.com/in/justin-peeters/",
@@ -19,7 +19,7 @@ const SocialLinks = () => {
       id: 2,
       child: (
         <>
-          GitHub <FaGithub size={30} />
+          GitHub <FaGithub size={30} className="transition duration-300 hover:text-white" />
         </>
       ),
       href: "https://github.com/JustDevinn",
@@ -28,7 +28,7 @@ const SocialLinks = () => {
       id: 3,
       child: (
         <>
-          Mail <HiOutlineMail size={30} />
+          Mail <HiOutlineMail size={30} className="transition duration-300 hover:text-white" />
         </>
       ),
       href: "mailto:Peeters.justin@yahoo.com",
@@ -37,7 +37,7 @@ const SocialLinks = () => {
       id: 4,
       child: (
         <>
-          Resume <BsFillPersonLinesFill size={30} />
+          Resume <BsFillPersonLinesFill size={30} className="transition duration-300 hover:text-white" />
         </>
       ),
       href: "/CVJustinPeeters.pdf",
@@ -60,7 +60,7 @@ const SocialLinks = () => {
           >
             <a
               href={href}
-              className="flex justify-between items-center w-full text-[#c6c6c6]"
+              className="flex justify-between items-center w-full text-[#c6c6c6] hover:text-white"
               download={download}
               target="_blank"
               rel="noreferrer"

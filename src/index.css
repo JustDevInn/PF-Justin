@@ -18,6 +18,27 @@
   }
 }
 
+@keyframes borderTextGlow {
+  0% {
+    color: white;
+    border-color: white;
+  }
+  50% {
+    color: orange;
+    border-color: orange;
+  }
+  100% {
+    color: white;
+    border-color: white;
+  }
+}
+
+.animate-border-text {
+  animation: borderTextGlow 1.5s ease-in-out;
+}
+
+
+
 /* font-family: 'Raleway', sans-serif;
 font-family: 'Teko', sans-serif;
 font-family: 'Berkshire Swash', serif; */

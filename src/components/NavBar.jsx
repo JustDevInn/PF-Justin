@@ -84,7 +84,7 @@ const NavBar = () => {
                 }}
                 className="flex justify-center items-center"
               >
-                {activeLink === link ? <FaRegCircle /> : <FaCircle />}
+                {activeLink === link ? <FaCircle className="text-white"/> : <FaRegCircle />}
               </Link>
               
               {/* Section name appears/disappears */}
