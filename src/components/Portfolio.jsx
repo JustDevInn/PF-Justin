@@ -7,6 +7,7 @@ import thevoidtattoo from "../assets/portfolio/bg.png";
 import removehero from "../assets/portfolio/couple.JPG";
 // mobile images
 import removeheroMobile from "../assets/portfolio/couple.JPG";
+import bookRetreats from "../assets/portfolio/bookretreatscut.png";
 import mmvmtmobile1 from "../assets/portfolio/images-mobile/marsof.jpg";
 import pawsofhopemobile from "../assets/portfolio/images-mobile/streetdog.jpg";
 import photomobile1 from "../assets/portfolio/images-mobile/woman.png";
@@ -34,6 +35,19 @@ const Portfolio = () => {
   const portfolios = [
     {
       id: 1,
+      src: bookRetreats,
+      srcMobile: bookRetreats,
+      role: "Developer",
+      description: "Find and book retreats",
+      explanation: "Developed a booking feature that fetches data from an API and dynamically displays retreats based on user-selected filters, providing an intuitive search experience.",
+      title: "Booking retreats",
+      titleTextColor: "text-white",
+      textColor: "text-white",
+      titleFontStyle: "sans",
+      href: "https://br-search-challenge-pq3n.vercel.app/search",
+    },
+    {
+      id: 2,
       src: removehero,
       srcMobile: removeheroMobile,
       role: "Designed and developer",
@@ -48,7 +62,7 @@ const Portfolio = () => {
       href: "https://re-move-v2.vercel.app/",
     },
     {
-      id: 2,
+      id: 3,
       src: royalmarines,
       srcMobile: mmvmtmobile1,
       role: "Designer and developer",
@@ -59,7 +73,7 @@ const Portfolio = () => {
       href: "https://mission-movement.netlify.app",
     },
     {
-      id: 3,
+      id: 4,
       src: beers,
       srcMobile: beers,
       role: "Designer and developer",
@@ -70,7 +84,7 @@ const Portfolio = () => {
       href: "https://github.com/JustDevInn/PxlWidgets-Beer-Assignment-Reactjs",
     },
     {
-      id: 4,
+      id: 5,
       src: ibussanctuary,
       srcMobile: pawsofhopemobile,
       role: "Designer and developer",
@@ -80,7 +94,7 @@ const Portfolio = () => {
       href: "https://dharmawangsa.netlify.app/",
     },
     {
-      id: 5,
+      id: 6,
       src: photographer1,
       srcMobile: photomobile1,
       role: "Developer",
@@ -93,7 +107,7 @@ const Portfolio = () => {
       href: "https://photographer-pf.vercel.app/",
     },
     {
-      id: 6,
+      id: 7,
       src: thevoidtattoo,
       srcMobile: thevoidtattoo,
       role: "Developer",
@@ -156,7 +170,7 @@ const Portfolio = () => {
 
     <div className="absolute bottom-5 left-5">
       <a href={href} target="_blank" rel="noreferrer">
-        <button className="font-teko font-thin tracking-widest border-2 border-white bg-white text-black px-6 py-2 duration-300 hover:bg-transparent hover:text-white">
+        <button className="font-teko font-thin tracking-widest border-2 border-white hover:bg-white hover:text-black px-6 py-2 duration-300 bg-transparent text-white">
           VIEW WEBSITE
         </button>
       </a>
@@ -220,7 +234,7 @@ const Portfolio = () => {
           {explanation}
         </p>
         <a href={href} target="_blank" rel="noreferrer">
-          <button className="sm:w-2/5 font-teko font-thin tracking-widest border-2 border-white bg-white text-black px-6 py-2 duration-300 hover:bg-transparent hover:text-white">
+          <button className="sm:w-2/5 font-teko font-thin tracking-widest border-2 border-white hover:bg-white hover:text-black px-6 py-2 duration-300 bg-transparent text-white">
             VIEW WEBSITE
           </button>
         </a>

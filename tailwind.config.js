@@ -15,6 +15,7 @@ module.exports = {
       berk: ['Berkshire Swash', 'serif'],
       rozha: 'Rozha One',
       playfair: 'Playfair Display',
+      sans: ["var(--font-plus-jakarta)", "sans-serif"]
     },
   },
   plugins: [
