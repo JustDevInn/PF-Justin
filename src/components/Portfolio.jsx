@@ -34,7 +34,18 @@ const Portfolio = () => {
 
   const portfolios = [
     {
-      id: 1,
+        id: 1,
+        src: royalmarines,
+        srcMobile: mmvmtmobile1,
+        role: "Designer and developer",
+        description: "Mission movement: forging the elite",
+        explanation: "A platform to guide and assist those looking to create a future in the special forces.",
+        title: "MISSION MOVEMENT",
+        titleFontStyle: "font-teko",
+        href: "https://missionmovement.vercel.app/",
+      },
+    {
+      id: 2,
       src: bookRetreats,
       srcMobile: bookRetreats,
       role: "Developer",
@@ -47,7 +58,7 @@ const Portfolio = () => {
       href: "https://br-search-challenge-pq3n.vercel.app/search",
     },
     {
-      id: 2,
+      id: 3,
       src: removehero,
       srcMobile: removeheroMobile,
       role: "Designed and developer",
@@ -60,17 +71,6 @@ const Portfolio = () => {
       title: "RE-MOVE Coaching",
       titleFontStyle: "font-teko",
       href: "https://re-move-v2.vercel.app/",
-    },
-    {
-      id: 3,
-      src: royalmarines,
-      srcMobile: mmvmtmobile1,
-      role: "Designer and developer",
-      description: "Mission movement: forging the elite",
-      explanation: "A platform to guide and assist those looking to create a future in the special forces.",
-      title: "MISSION MOVEMENT",
-      titleFontStyle: "font-teko",
-      href: "https://mission-movement.netlify.app",
     },
     {
       id: 4,
