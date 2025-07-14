@@ -19,7 +19,7 @@ const Contact = () => {
           <p className="text-6xl uppercase font-teko tracking-wider inline ">
             Contact
           </p>
-          <p className="py-6 text-gray-300 px-5">If you’re looking to enhance your online presence, collaborate on a project, or simply chat over a coffee about web design, let’s connect! Feel free to reach out via email, phone, or LinkedIn—I’d love to discuss potential opportunities or brainstorm ideas together.</p>
+          <p className="py-6 text-gray-300 px-5">If you’re looking to enhance your online presence, collaborate on a project, or simply chat over a coffee about web design, let’s connect! Feel free to reach out via email, phone, or LinkedIn-I’d love to discuss potential opportunities or brainstorm ideas together.</p>
         </motion.div>
 {/* form */}
         <div

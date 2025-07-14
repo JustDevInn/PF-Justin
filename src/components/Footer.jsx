@@ -22,7 +22,7 @@ const Footer = () => {
       </div>
       <div className="mb-2">
         <h5 className="font-bold uppercase tracking-widest">Phone</h5>
-        <p className="text-gray-300">+361 25 18 34 59</p>
+        <p className="text-gray-300">+361 49 17 16 84</p>
       </div>
       <div className="mb-2">
         <h5 className="font-bold uppercase tracking-widest">Social</h5>
