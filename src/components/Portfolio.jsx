@@ -91,7 +91,7 @@ const Portfolio = () => {
       description: "Online presence for strays",
       explanation: "A potential online platform to help animal rescues reach worldwide.",
       title: "Paws of Hope",
-      href: "https://dharmawangsa.netlify.app/",
+      href: "https://github.com/JustDevInn/dharmawangsa",
     },
     {
       id: 6,
