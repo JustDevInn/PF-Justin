@@ -70,7 +70,8 @@ const Portfolio = () => {
       explanation: "A custom-built website designed and developed using React and Tailwind CSS",
       title: "RE-MOVE Coaching",
       titleFontStyle: "font-teko",
-      href: "https://re-move-v2.vercel.app/",
+      href: "/",
+      // https://re-move-v2.vercel.app/
     },
     {
       id: 4,
@@ -91,7 +92,8 @@ const Portfolio = () => {
       description: "Online presence for strays",
       explanation: "A potential online platform to help animal rescues reach worldwide.",
       title: "Paws of Hope",
-      href: "https://github.com/JustDevInn/dharmawangsa",
+      href: "/",
+      // https://github.com/JustDevInn/dharmawangsa
     },
     {
       id: 6,
