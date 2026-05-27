@@ -5,27 +5,27 @@ import { FaGitAlt, FaWindows } from "react-icons/fa";
 import { CgFigma } from "react-icons/cg";
 import { motion } from 'framer-motion';
 
-const Experience = () => {
-  const techs = [
-    { id: 1, child: <SiMongodb size={30} /> },
-    { id: 2, child: <SiExpress size={30} /> },
-    { id: 3, child: <DiReact size={30} /> },
-    { id: 4, child: <DiNodejs size={30} /> },
-    { id: 5, child: <SiTailwindcss size={30} /> },
-    { id: 6, child: <DiNpm size={30} /> },
-    { id: 7, child: <DiHtml5 size={30} /> },
-    { id: 8, child: <DiCss3 size={30} /> },
-    { id: 9, child: <DiJsBadge size={30} /> },
-    { id: 10, child: <DiBootstrap size={30} /> },
-    { id: 11, child: <SiSketch size={30} /> },
-    { id: 12, child: <CgFigma size={30} /> },
-    { id: 13, child: <DiGithubAlt size={30} /> },
-    { id: 14, child: <FaGitAlt size={30} /> },
-    { id: 15, child: <DiVisualstudio size={30} /> },
-    { id: 16, child: <SiApple size={30} /> },
-    { id: 17, child: <FaWindows size={30} /> },
-  ];
+const techs = [
+  { id: 1, child: <SiMongodb size={30} /> },
+  { id: 2, child: <SiExpress size={30} /> },
+  { id: 3, child: <DiReact size={30} /> },
+  { id: 4, child: <DiNodejs size={30} /> },
+  { id: 5, child: <SiTailwindcss size={30} /> },
+  { id: 6, child: <DiNpm size={30} /> },
+  { id: 7, child: <DiHtml5 size={30} /> },
+  { id: 8, child: <DiCss3 size={30} /> },
+  { id: 9, child: <DiJsBadge size={30} /> },
+  { id: 10, child: <DiBootstrap size={30} /> },
+  { id: 11, child: <SiSketch size={30} /> },
+  { id: 12, child: <CgFigma size={30} /> },
+  { id: 13, child: <DiGithubAlt size={30} /> },
+  { id: 14, child: <FaGitAlt size={30} /> },
+  { id: 15, child: <DiVisualstudio size={30} /> },
+  { id: 16, child: <SiApple size={30} /> },
+  { id: 17, child: <FaWindows size={30} /> },
+];
 
+const Experience = () => {
   // Function to generate a random delay for each icon
   const generateRandomDelay = () => Math.random() * 2; // Random delay between 0 and 2 seconds
 
@@ -71,7 +71,7 @@ const Experience = () => {
     return () => {
       intervals.forEach(clearInterval);
     };
-  }, [techs]);
+  }, []);
 
   return (
     <div

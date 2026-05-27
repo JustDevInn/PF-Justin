@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { Link, NavLink } from "react-router-dom";
 
+const focusRingClass =
+  "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-300 focus-visible:ring-offset-4 focus-visible:ring-offset-black";
+
 const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const links = [
@@ -12,22 +15,20 @@ const NavBar = () => {
   ];
 
   const linkClassName = ({ isActive }) =>
-    `px-1 py-2 text-sm uppercase tracking-[0.22em] transition duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-300 focus-visible:ring-offset-4 focus-visible:ring-offset-black ${
-      isActive
-        ? "text-white"
-        : "text-gray-300 hover:text-white"
+    `px-1 py-2 text-sm uppercase tracking-[0.22em] transition duration-300 ${focusRingClass} ${
+      isActive ? "text-white" : "text-gray-300 hover:text-white"
     }`;
 
   return (
     <nav
       aria-label="Primary navigation"
-      className="fixed top-0 left-0 z-[70] w-full bg-transparent text-gray-300"
+      className="fixed left-0 top-0 z-[80] w-full max-w-full overflow-x-clip border-b border-white/10 bg-black/35 text-gray-300 backdrop-blur-md"
     >
-      <div className="flex h-20 w-full items-center justify-between px-5 md:px-10">
+      <div className="box-border flex h-20 w-full max-w-full items-center justify-between gap-4 pl-5 pr-8 md:px-10">
         <Link
           to="/"
           onClick={() => setIsMenuOpen(false)}
-          className="cursor-pointer font-teko text-3xl uppercase tracking-[0.18em] text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-300 focus-visible:ring-offset-4 focus-visible:ring-offset-black"
+          className={`min-w-0 shrink cursor-pointer font-teko text-3xl uppercase tracking-[0.18em] text-white ${focusRingClass}`}
         >
           PF-JUSTIN
         </Link>
@@ -51,7 +52,7 @@ const NavBar = () => {
           aria-controls="mobile-navigation"
           aria-expanded={isMenuOpen}
           onClick={() => setIsMenuOpen((open) => !open)}
-          className="inline-flex h-11 w-11 items-center justify-center text-gray-200 transition hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-300 focus-visible:ring-offset-4 focus-visible:ring-offset-black md:hidden"
+          className={`inline-flex h-10 w-10 shrink-0 items-center justify-center text-gray-200 transition hover:text-white ${focusRingClass} md:hidden`}
         >
           {isMenuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
         </button>
@@ -60,7 +61,7 @@ const NavBar = () => {
       {isMenuOpen && (
         <div
           id="mobile-navigation"
-          className="fixed inset-x-0 top-20 z-[60] min-h-[calc(100vh-5rem)] border-t border-white/10 bg-gradient-to-b from-black via-gray-950 to-gray-900 px-5 py-10 md:hidden"
+          className="fixed inset-x-0 top-20 z-[75] max-h-[calc(100dvh-5rem)] max-w-full overflow-y-auto overflow-x-hidden border-t border-white/10 bg-gradient-to-b from-black via-gray-950 to-gray-900 px-5 py-10 md:hidden"
         >
           <ul className="flex flex-col gap-7">
             {links.map(({ label, to }) => (
@@ -69,7 +70,7 @@ const NavBar = () => {
                   to={to}
                   onClick={() => setIsMenuOpen(false)}
                   className={({ isActive }) =>
-                    `block py-3 font-teko text-5xl uppercase tracking-wider transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-300 focus-visible:ring-offset-4 focus-visible:ring-offset-black ${
+                    `block py-3 font-teko text-5xl uppercase tracking-wider transition ${focusRingClass} ${
                       isActive
                         ? "text-white"
                         : "text-gray-200 hover:text-white"

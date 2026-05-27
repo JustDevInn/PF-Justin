@@ -231,19 +231,19 @@ const HeroScene = () => {
       <div
         aria-hidden="true"
         ref={accentTwoRef}
-        className="absolute bottom-[16%] right-[9%] h-52 w-52 border border-white/10"
+        className="absolute bottom-[16%] right-[9%] hidden h-52 w-52 border border-white/10 md:block"
       ></div>
       <div
         aria-hidden="true"
         className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black via-black/70 to-transparent"
       ></div>
 
-      <section className="relative z-10 mx-auto grid h-full max-w-screen-xl grid-rows-[1fr_auto] px-5 pb-12 pt-20 md:px-10 md:pb-14 md:pt-[5.5rem] lg:grid-cols-[1.04fr_0.96fr] lg:grid-rows-1 lg:items-center lg:gap-10 lg:pt-[4.5rem]">
-        <div className="relative z-20 flex min-h-0 flex-col justify-center">
-          <div className="relative h-[min(43dvh,330px)] max-w-3xl">
+      <section className="relative z-10 mx-auto grid h-full w-full max-w-screen-xl min-w-0 grid-rows-[minmax(0,1fr)_auto] px-5 pb-14 pt-24 sm:pb-14 sm:pt-24 md:px-10 md:pt-[5.5rem] lg:grid-cols-[1.04fr_0.96fr] lg:grid-rows-1 lg:items-center lg:gap-10 lg:pt-[4.5rem]">
+        <div className="relative z-20 flex min-h-0 min-w-0 flex-col justify-start pt-4 sm:pt-8 md:justify-center md:pt-0">
+          <div className="relative h-[min(30dvh,250px)] max-w-3xl md:h-[min(43dvh,330px)]">
             <div
               ref={stageOneRef}
-              className="absolute inset-0 flex flex-col justify-center"
+              className="absolute inset-0 flex flex-col justify-start md:justify-center"
             >
               <div className="mb-3 flex items-center gap-3">
                 <span
@@ -254,22 +254,22 @@ const HeroScene = () => {
                   Portfolio / Interface craft
                 </p>
               </div>
-              <h1 className="max-w-4xl font-teko text-[clamp(3.5rem,8vw,7rem)] uppercase leading-[0.86] tracking-wide text-white">
+              <h1 className="max-w-4xl break-words font-teko text-5xl uppercase leading-[0.9] tracking-wide text-white sm:text-[clamp(3.5rem,8vw,7rem)] sm:leading-[0.86]">
                 Ciao, I&apos;m Justin.
               </h1>
-              <p className="mt-5 max-w-2xl text-base leading-7 text-gray-300 md:text-lg">
+              <p className="mt-5 w-full max-w-[20rem] break-words pr-3 text-base leading-7 text-gray-300 sm:max-w-2xl sm:pr-0 md:text-lg">
                 I build sharp digital experiences with a focus on presence, clarity, and execution.
               </p>
             </div>
 
             <div
               ref={stageTwoRef}
-              className="pointer-events-none absolute inset-0 flex flex-col justify-center"
+              className="pointer-events-none absolute inset-0 flex flex-col justify-start opacity-0 md:justify-center"
             >
               <p className="mb-3 max-w-sm text-[10px] uppercase tracking-[0.28em] text-gray-500 md:text-xs">
                 Design logic. Frontend systems. Practical execution.
               </p>
-              <p className="font-teko text-[clamp(3rem,6vw,5.4rem)] uppercase leading-none tracking-wider text-white">
+              <p className="break-words font-teko text-5xl uppercase leading-none tracking-wider text-white sm:text-[clamp(3rem,6vw,5.4rem)]">
                 Frontend developer
               </p>
               <p className="mt-5 max-w-xl text-sm leading-6 text-gray-300 md:text-base">
@@ -279,12 +279,12 @@ const HeroScene = () => {
 
             <div
               ref={stageThreeRef}
-              className="pointer-events-none absolute inset-0 flex flex-col justify-center"
+              className="pointer-events-none absolute inset-0 flex flex-col justify-start opacity-0 md:justify-center"
             >
               <p className="mb-3 text-[10px] uppercase tracking-[0.34em] text-orange-300 md:text-xs">
                 Motion / systems / interface feel
               </p>
-              <p className="font-teko text-[clamp(3rem,6vw,5.4rem)] uppercase leading-none tracking-wider text-white">
+              <p className="break-words font-teko text-5xl uppercase leading-none tracking-wider text-white sm:text-[clamp(3rem,6vw,5.4rem)]">
                 Interactive interfaces
               </p>
               <p className="mt-5 max-w-2xl text-base leading-7 text-gray-300">
@@ -294,12 +294,12 @@ const HeroScene = () => {
 
             <div
               ref={stageFourRef}
-              className="pointer-events-none absolute inset-0 flex flex-col justify-center"
+              className="pointer-events-none absolute inset-0 flex flex-col justify-start opacity-0 md:justify-center"
             >
               <p className="mb-3 text-[10px] uppercase tracking-[0.34em] text-orange-300 md:text-xs">
                 Design + code + discipline
               </p>
-              <p className="font-teko text-[clamp(3rem,6vw,5.4rem)] uppercase leading-none tracking-wider text-white">
+              <p className="break-words font-teko text-5xl uppercase leading-none tracking-wider text-white sm:text-[clamp(3rem,6vw,5.4rem)]">
                 Real-world discipline
               </p>
               <p className="mt-5 max-w-2xl text-sm leading-6 text-gray-300 md:text-base">
@@ -321,11 +321,11 @@ const HeroScene = () => {
 
           <div
             ref={actionsRef}
-            className="mt-4 flex flex-col gap-2 sm:flex-row sm:items-center"
+            className="mt-4 flex flex-col gap-2 opacity-0 sm:flex-row sm:items-center"
           >
             <Link
               to="/projects"
-              className="group inline-flex min-h-11 w-fit items-center border border-white bg-white px-5 py-2 font-teko text-lg uppercase tracking-widest text-black transition hover:border-orange-300 hover:bg-orange-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-300 focus-visible:ring-offset-4 focus-visible:ring-offset-black"
+              className="group inline-flex min-h-11 w-full items-center justify-center border border-white bg-white px-5 py-2 font-teko text-lg uppercase tracking-widest text-black transition hover:border-orange-300 hover:bg-orange-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-300 focus-visible:ring-offset-4 focus-visible:ring-offset-black sm:w-fit"
             >
               View Projects
               <MdOutlineKeyboardArrowRight
@@ -335,20 +335,20 @@ const HeroScene = () => {
             </Link>
             <Link
               to="/personal"
-              className="inline-flex min-h-11 w-fit items-center border border-white/30 bg-black/20 px-5 py-2 font-teko text-lg uppercase tracking-widest text-gray-200 transition hover:border-white hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-300 focus-visible:ring-offset-4 focus-visible:ring-offset-black"
+              className="inline-flex min-h-11 w-full items-center justify-center border border-white/30 bg-black/20 px-5 py-2 font-teko text-lg uppercase tracking-widest text-gray-200 transition hover:border-white hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-300 focus-visible:ring-offset-4 focus-visible:ring-offset-black sm:w-fit"
             >
               Personal
             </Link>
             <Link
               to="/contact"
-              className="inline-flex min-h-11 w-fit items-center border border-white/30 bg-black/20 px-5 py-2 font-teko text-lg uppercase tracking-widest text-gray-200 transition hover:border-white hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-300 focus-visible:ring-offset-4 focus-visible:ring-offset-black"
+              className="inline-flex min-h-11 w-full items-center justify-center border border-white/30 bg-black/20 px-5 py-2 font-teko text-lg uppercase tracking-widest text-gray-200 transition hover:border-white hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-300 focus-visible:ring-offset-4 focus-visible:ring-offset-black sm:w-fit"
             >
               Contact
             </Link>
           </div>
         </div>
 
-        <div className="pointer-events-none absolute bottom-0 right-[-22%] z-10 w-[72vw] max-w-[360px] opacity-45 md:right-[-5%] md:w-[42vw] md:max-w-[460px] lg:relative lg:right-auto lg:w-full lg:max-w-none lg:opacity-100">
+        <div className="pointer-events-none absolute bottom-20 right-0 z-10 w-[58vw] max-w-[280px] opacity-35 sm:w-[52vw] sm:max-w-[320px] md:bottom-8 md:right-[-2%] md:w-[38vw] md:max-w-[440px] md:opacity-60 lg:relative lg:bottom-auto lg:right-auto lg:w-full lg:max-w-none lg:self-center lg:opacity-100">
           <div
             ref={profileFrameRef}
             aria-hidden="true"
@@ -373,7 +373,7 @@ const HeroScene = () => {
             <img
               src={HeroImage}
               alt=""
-              className="h-auto max-h-[min(68dvh,620px)] w-full select-none object-contain drop-shadow-[0_28px_80px_rgba(0,0,0,0.65)]"
+              className="h-auto max-h-[min(42dvh,420px)] w-full select-none object-contain drop-shadow-[0_28px_80px_rgba(0,0,0,0.65)] md:max-h-[min(62dvh,560px)] lg:max-h-[min(68dvh,620px)]"
               draggable="false"
             />
           </div>
@@ -385,7 +385,7 @@ const HeroScene = () => {
         >
           <div className="mb-2 flex items-center justify-between text-[10px] uppercase tracking-[0.28em] text-gray-500">
             <span ref={progressTextRef}>01 / 04</span>
-            <span>Scroll input controls scene</span>
+            <span className="hidden sm:inline">Scroll input controls scene</span>
           </div>
           <div className="h-px bg-white/15">
             <div ref={progressRef} className="h-px w-full origin-left bg-orange-300"></div>

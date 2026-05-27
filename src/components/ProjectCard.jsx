@@ -42,7 +42,7 @@ const ProjectCard = ({ project, index = 0, featured = false }) => {
   return (
     <motion.article
       {...cardMotion}
-      className={`group relative overflow-hidden border border-white/10 bg-white/[0.035] shadow-[0_30px_120px_rgba(0,0,0,0.35)] ${
+      className={`group relative mx-auto w-full max-w-full min-w-0 overflow-hidden border border-white/10 bg-white/[0.035] shadow-[0_30px_120px_rgba(0,0,0,0.35)] ${
         featured ? "min-h-[78vh]" : "min-h-[62vh]"
       }`}
     >
@@ -51,7 +51,7 @@ const ProjectCard = ({ project, index = 0, featured = false }) => {
         className="absolute inset-0 bg-gradient-to-br from-white/[0.08] via-transparent to-orange-300/[0.08] opacity-70"
       ></div>
 
-      <div className="grid min-h-[inherit] lg:grid-cols-[1.12fr_0.88fr]">
+      <div className="grid min-h-[inherit] w-full min-w-0 lg:grid-cols-[1.12fr_0.88fr]">
         <div className="relative min-h-[330px] overflow-hidden lg:min-h-full">
           <picture>
             {srcMobile && (
@@ -75,15 +75,15 @@ const ProjectCard = ({ project, index = 0, featured = false }) => {
           )}
         </div>
 
-        <div className="relative z-10 flex flex-col justify-between p-6 md:p-8 lg:p-10">
+        <div className="relative z-10 flex w-full min-w-0 flex-col justify-between p-6 md:p-8 lg:p-10">
           <div>
-            <div className="mb-8 flex items-center justify-between gap-4 text-[10px] uppercase tracking-[0.28em] text-gray-400">
+            <div className="mb-8 flex flex-col gap-2 text-[10px] uppercase tracking-[0.28em] text-gray-400 sm:flex-row sm:items-center sm:justify-between sm:gap-4">
               <span>{projectNumber}</span>
-              <span>{role}</span>
+              <span className="break-words">{role}</span>
             </div>
 
             <h2
-              className={`${titleFontClass} text-5xl uppercase leading-none tracking-wide text-white md:text-6xl ${
+              className={`${titleFontClass} max-w-full break-words text-[2.75rem] uppercase leading-none tracking-normal text-white [overflow-wrap:anywhere] sm:text-5xl sm:tracking-wide md:text-6xl ${
                 featured ? "lg:text-7xl" : "lg:text-6xl"
               }`}
             >
@@ -93,7 +93,7 @@ const ProjectCard = ({ project, index = 0, featured = false }) => {
             <div className="mt-6 h-px w-24 bg-orange-300"></div>
 
             <div className="mt-8 max-w-xl">
-              <p className="font-teko text-3xl uppercase leading-none tracking-wider text-white md:text-4xl">
+              <p className="max-w-full break-words font-teko text-[1.75rem] uppercase leading-none tracking-normal text-white [overflow-wrap:anywhere] sm:text-3xl sm:tracking-wider md:text-4xl">
                 {description}
               </p>
               <p className="mt-5 text-sm leading-7 text-gray-300 md:text-base">

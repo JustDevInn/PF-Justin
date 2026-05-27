@@ -15,6 +15,28 @@
 @layer base {
   html {
     font-family: 'Nunito Sans', sans-serif;
+    width: 100%;
+    max-width: 100%;
+    background: #030405;
+    overflow-x: hidden;
+    overflow-x: clip;
+  }
+
+  body {
+    width: 100%;
+    max-width: 100%;
+    min-width: 320px;
+    overflow-x: hidden;
+    overflow-x: clip;
+    background: #030405;
+  }
+
+  #root {
+    width: 100%;
+    max-width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;
+    overflow-x: clip;
   }
 }
 

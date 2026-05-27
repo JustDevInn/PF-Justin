@@ -16,9 +16,8 @@ const Portfolio = () => {
 
   return (
     <main
-      name="portfolio"
       id="portfolio"
-      className="min-h-screen w-full overflow-x-hidden bg-[#030405] px-5 pb-24 pt-28 text-white md:px-10 md:pt-32"
+      className="box-border min-h-screen w-full max-w-full overflow-x-hidden bg-[#030405] px-6 pb-24 pt-28 text-white md:px-10 md:pt-32"
     >
       <div
         aria-hidden="true"
@@ -29,10 +28,10 @@ const Portfolio = () => {
         className="pointer-events-none fixed inset-0 bg-[linear-gradient(rgba(255,255,255,0.045)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.045)_1px,transparent_1px)] bg-[size:56px_56px] opacity-25"
       ></div>
 
-      <div className="relative z-10 mx-auto max-w-screen-xl">
+      <div className="relative z-10 mx-auto w-full max-w-screen-xl min-w-0">
         <motion.header
           {...headingMotion}
-          className="mb-14 max-w-4xl md:mb-20"
+          className="mb-14 w-full max-w-4xl md:mb-20"
         >
           <div className="mb-5 flex items-center gap-3">
             <span
@@ -43,7 +42,7 @@ const Portfolio = () => {
               Selected Work
             </p>
           </div>
-          <h1 className="font-teko text-[clamp(3.5rem,8vw,7.25rem)] uppercase leading-[0.9] tracking-wide">
+          <h1 className="max-w-full break-words font-teko text-[2.75rem] uppercase leading-[0.95] tracking-normal [overflow-wrap:anywhere] sm:text-[clamp(3.5rem,8vw,7.25rem)] sm:leading-[0.9] sm:tracking-wide">
             Projects that combine design, code, and function.
           </h1>
           <p className="mt-6 max-w-2xl text-base leading-7 text-gray-300 md:text-lg">
@@ -51,7 +50,7 @@ const Portfolio = () => {
           </p>
         </motion.header>
 
-        <div className="space-y-8 md:space-y-12">
+        <div className="mx-auto w-full max-w-full space-y-8 md:space-y-12">
           {projects.map((project, index) => (
             <ProjectCard
               key={project.id}

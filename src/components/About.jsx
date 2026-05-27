@@ -48,9 +48,8 @@ const About = () => {
 
   return (
     <main
-      name="about"
       id="about"
-      className="relative min-h-screen w-full overflow-x-hidden bg-[#030405] px-5 pb-24 pt-28 text-white md:px-10 md:pt-32"
+      className="relative box-border min-h-screen w-full max-w-full overflow-x-hidden bg-[#030405] px-6 pb-24 pt-28 text-white md:px-10 md:pt-32"
     >
       <div
         aria-hidden="true"
@@ -61,10 +60,10 @@ const About = () => {
         className="pointer-events-none fixed inset-0 bg-[linear-gradient(rgba(255,255,255,0.042)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.042)_1px,transparent_1px)] bg-[size:56px_56px] opacity-25"
       ></div>
 
-      <div className="relative z-10 mx-auto max-w-screen-xl">
+      <div className="relative z-10 mx-auto w-full max-w-screen-xl min-w-0">
         <motion.section
           {...reveal}
-          className="max-w-5xl"
+          className="w-full max-w-5xl"
           aria-labelledby="personal-heading"
         >
           <div className="mb-5 flex items-center gap-3">
@@ -78,7 +77,7 @@ const About = () => {
           </div>
           <h1
             id="personal-heading"
-            className="font-teko text-[clamp(3.5rem,8vw,7.25rem)] uppercase leading-[0.9] tracking-wide"
+            className="max-w-full break-words font-teko text-[2.75rem] uppercase leading-[0.95] tracking-normal [overflow-wrap:anywhere] sm:text-[clamp(3.5rem,8vw,7.25rem)] sm:leading-[0.9] sm:tracking-wide"
           >
             Design, code, and discipline shaped by real-world experience.
           </h1>
@@ -88,7 +87,7 @@ const About = () => {
         </motion.section>
 
         <section
-          className="mt-16 grid gap-4 md:mt-24 md:grid-cols-2"
+          className="mx-auto mt-16 grid w-full gap-4 md:mt-24 md:grid-cols-2"
           aria-label="Personal story timeline"
         >
           {storyBlocks.map((block, index) => (
@@ -106,13 +105,13 @@ const About = () => {
                       ease: [0.22, 1, 0.36, 1],
                     },
                   })}
-              className="group border border-white/10 bg-white/[0.035] p-6 transition duration-300 hover:border-orange-300/50 hover:bg-white/[0.055] md:p-8"
+              className="group min-w-0 border border-white/10 bg-white/[0.035] p-6 transition duration-300 hover:border-orange-300/50 hover:bg-white/[0.055] md:p-8"
             >
               <div className="mb-8 flex items-center justify-between text-[10px] uppercase tracking-[0.28em] text-gray-500">
                 <span>{block.number}</span>
                 <span>Story</span>
               </div>
-              <h2 className="font-teko text-4xl uppercase tracking-wide text-white md:text-5xl">
+              <h2 className="max-w-full break-words font-teko text-[2.25rem] uppercase tracking-normal text-white [overflow-wrap:anywhere] sm:tracking-wide md:text-5xl">
                 {block.title}
               </h2>
               <div className="mt-5 h-px w-20 bg-orange-300"></div>
@@ -125,7 +124,7 @@ const About = () => {
 
         <motion.section
           {...reveal}
-          className="mt-16 border border-white/10 bg-black/20 p-6 md:mt-24 md:p-8"
+          className="mx-auto mt-16 w-full border border-white/10 bg-black/20 p-6 md:mt-24 md:p-8"
           aria-labelledby="principles-heading"
         >
           <div className="grid gap-8 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
@@ -135,7 +134,7 @@ const About = () => {
               </p>
               <h2
                 id="principles-heading"
-                className="mt-4 font-teko text-5xl uppercase leading-none tracking-wide text-white md:text-6xl"
+                className="mt-4 max-w-full break-words font-teko text-[2.75rem] uppercase leading-none tracking-normal text-white [overflow-wrap:anywhere] sm:text-5xl sm:tracking-wide md:text-6xl"
               >
                 How I approach the work.
               </h2>
@@ -156,11 +155,11 @@ const About = () => {
 
         <motion.section
           {...reveal}
-          className="mt-16 md:mt-24"
+          className="mx-auto mt-16 w-full md:mt-24"
           aria-label="Personal page call to action"
         >
           <div className="border border-white/10 bg-white/[0.035] p-6 md:p-8">
-            <p className="font-teko text-4xl uppercase leading-none tracking-wide text-white md:text-5xl">
+            <p className="max-w-full break-words font-teko text-[2.25rem] uppercase leading-none tracking-normal text-white [overflow-wrap:anywhere] sm:tracking-wide md:text-5xl">
               Want to see how this translates into projects?
             </p>
             <div className="mt-7 flex flex-col gap-3 sm:flex-row">

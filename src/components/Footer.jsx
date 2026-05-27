@@ -1,47 +1,65 @@
-import React from 'react'
+import React from "react";
 
 const Footer = () => {
   return (
-    <div
-    name="footer"
-    className="px-5 w-full md:pt-10 h-screen bg-gradient-to-b from-gray-900 to-black text-white
-    flex items-center justify-center md:block"
+    <footer
+      className="box-border w-full max-w-full overflow-x-hidden bg-gradient-to-b from-gray-900 to-black px-6 py-16 text-white md:px-10 md:py-20"
+      aria-labelledby="footer-heading"
     >
-<footer className="h-[350px] md:h-[450px] flex flex-col p-4 justify-center max-w-screen-lg mx-auto">
-  {/* details */}
-  <div className="w-full flex justify-between flex-col mt-10">
-      <h1 className="text-6xl uppercase font-teko tracking-wider inline ">
-      Details
-      </h1>
-    <div className="pl-20 pt-20 flex flex-col justify-center md:justify-between md:flex-row  text-white">
-      <div className="mb-2">
-        <h5 className="font-bold uppercase tracking-widest">Email</h5>
-        <a
-        href="mailto:Peeters.justin@yahoo.com"
-        className="text-gray-300">Peeters.justin@yahoo.com</a>
-      </div>
-      <div className="mb-2">
-        <h5 className="font-bold uppercase tracking-widest">Phone</h5>
-        <p className="text-gray-300">+361 49 17 16 84</p>
-      </div>
-      <div className="mb-2">
-        <h5 className="font-bold uppercase tracking-widest">Social</h5>
-        <a
-        href="http://www.instagram.com/justinpeeters"
-        target="blank"
-        className="text-gray-300"
-        >@justinpeeters</a>
-      </div>
-    </div>
-  </div>
-    {/* copyright + kvk */}
-    <div className="mt-20 w-full flex flex-row justify-between text-white font-thin text-[8px] lg:text-[10px] tracking-widest">
-      <p className="">Copyright 2023 all rights reserved.</p>
-      <p>KVK: <span className="font-medium">Justin Peeters Development 89798690899</span></p>
-    </div>
-      </footer>
-    </div>
-  )
-}
+      <div className="mx-auto flex max-w-screen-lg flex-col justify-center">
+        <div className="w-full">
+          <h2
+            id="footer-heading"
+            className="max-w-full break-words font-teko text-[2.75rem] uppercase tracking-normal [overflow-wrap:anywhere] sm:text-5xl sm:tracking-wider md:text-6xl"
+          >
+            Details
+          </h2>
+          <div className="grid gap-8 pt-12 text-white md:grid-cols-3 md:gap-10 md:pt-16">
+            <div>
+              <h3 className="text-sm font-bold uppercase tracking-widest">
+                Email
+              </h3>
+              <a
+                href="mailto:Peeters.justin@yahoo.com"
+                className="mt-2 block break-words text-gray-300 transition hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-300 focus-visible:ring-offset-4 focus-visible:ring-offset-black"
+              >
+                Peeters.justin@yahoo.com
+              </a>
+            </div>
+            <div>
+              <h3 className="text-sm font-bold uppercase tracking-widest">
+                Phone
+              </h3>
+              <p className="mt-2 text-gray-300">+361 49 17 16 84</p>
+            </div>
+            <div>
+              <h3 className="text-sm font-bold uppercase tracking-widest">
+                Social
+              </h3>
+              <a
+                href="http://www.instagram.com/justinpeeters"
+                target="_blank"
+                rel="noreferrer"
+                className="mt-2 block text-gray-300 transition hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-300 focus-visible:ring-offset-4 focus-visible:ring-offset-black"
+              >
+                @justinpeeters
+              </a>
+            </div>
+          </div>
+        </div>
 
-export default Footer
+        <div className="mt-16 flex w-full flex-col gap-3 text-[10px] font-thin uppercase tracking-widest text-white sm:flex-row sm:justify-between">
+          <p>Copyright 2023 all rights reserved.</p>
+          <p>
+            KVK:{" "}
+            <span className="font-medium">
+              Justin Peeters Development 89798690899
+            </span>
+          </p>
+        </div>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;
