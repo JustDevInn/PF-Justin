@@ -8,7 +8,7 @@ const Contact = () => {
     <div
       name="contact"
       id="contact"
-      className="px-5 w-full md:pt-80 h-[50vh] bg-gradient-to-b from-black to-gray-900 text-white"
+      className="px-5 w-full pt-24 md:pt-80 h-[50vh] bg-gradient-to-b from-black to-gray-900 text-white"
     >
       <div className="flex flex-col p-4 justify-center max-w-screen-lg mx-auto">
         <motion.div

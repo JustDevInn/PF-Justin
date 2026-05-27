@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-scroll";
+import { Link } from "react-router-dom";
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 
 const WorkTogetherButton = () => {
@@ -31,9 +31,7 @@ const WorkTogetherButton = () => {
 
   return (
     <Link
-      to="contact"
-      smooth
-      duration={500}
+      to="/contact"
       className={`group text-white border border-white hover:border-orange-300 w-fit px-6 py-3 my-2 flex items-center cursor-pointer
         ${animationStage === 1 ? "animate-border-text" : ""}
         ${animationStage === 2 ? "animate-border-text" : ""}`}

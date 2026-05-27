@@ -2,7 +2,7 @@ import React from "react";
 import DynamicHeading from "./DynamicHeading";
 import HeroImage from "../assets/jpnobg.png";
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
-import { Link } from "react-scroll";
+import { Link } from "react-router-dom";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
 import { BsFillPersonLinesFill } from "react-icons/bs";
@@ -78,8 +78,7 @@ const Home = () => {
           </p>
           <div className="flex md:flex-row flex-col justify-start md:items-center items-start md:gap-4 gap-1">
           <Link
-          to="portfolio"
-          smooth duration={500}
+          to="/projects"
           className='group text-white border border-white hover:border-orange-300 w-fit px-6 py-3 my-2 flex items-center cursor-pointer'>
              View My Work
             <span className='group-hover:rotate-90 duration-300 hover:text-orange-300'>
@@ -130,5 +129,4 @@ const Home = () => {
 };
 
 export default Home;
-
 
