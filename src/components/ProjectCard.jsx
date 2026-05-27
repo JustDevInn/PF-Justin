@@ -1,8 +1,7 @@
 import React from "react";
-import { motion } from "framer-motion";
-import { fadeIn } from "../variants";
+import { motion, useReducedMotion } from "framer-motion";
 
-const ProjectCard = ({ project, isMobile }) => {
+const ProjectCard = ({ project, index = 0, featured = false }) => {
   const {
     src,
     srcMobile,
@@ -11,109 +10,115 @@ const ProjectCard = ({ project, isMobile }) => {
     role,
     description,
     explanation,
-    textColor = "text-white",
-    titleTextColor = "text-white",
     titleFontStyle = "font-teko",
   } = project;
 
-  const imageSrc = isMobile ? srcMobile : src;
+  const shouldReduceMotion = useReducedMotion();
   const imageAlt = `${title} project preview`;
+  const projectNumber = String(index + 1).padStart(2, "0");
+  const isExternal = href?.startsWith("http");
+  const isPlaceholder = !href || href === "/";
+  const ctaLabel = isPlaceholder ? "View project" : "View website";
+  const titleFontClass = titleFontStyle.startsWith("font-")
+    ? titleFontStyle
+    : `font-${titleFontStyle}`;
+
+  const cardMotion = shouldReduceMotion
+    ? {}
+    : {
+        initial: { opacity: 0, y: 42 },
+        whileInView: { opacity: 1, y: 0 },
+        viewport: { once: true, amount: 0.22 },
+        transition: { duration: 0.75, ease: [0.22, 1, 0.36, 1] },
+      };
+
+  const imageMotion = shouldReduceMotion
+    ? {}
+    : {
+        whileHover: { scale: 1.035 },
+        transition: { duration: 0.65, ease: [0.22, 1, 0.36, 1] },
+      };
 
   return (
-    <div className="relative h-[70vh] w-full mb-20">
-      {isMobile ? (
-        <>
-          <motion.div
-            variants={fadeIn("up")}
-            initial="hidden"
-            whileInView={"show"}
-            viewport={{ once: false, amount: 0.1 }}
-            className="relative w-full h-full"
-          >
-            <div className="absolute inset-0 bg-black/20"></div>
+    <motion.article
+      {...cardMotion}
+      className={`group relative overflow-hidden border border-white/10 bg-white/[0.035] shadow-[0_30px_120px_rgba(0,0,0,0.35)] ${
+        featured ? "min-h-[78vh]" : "min-h-[62vh]"
+      }`}
+    >
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 bg-gradient-to-br from-white/[0.08] via-transparent to-orange-300/[0.08] opacity-70"
+      ></div>
 
+      <div className="grid min-h-[inherit] lg:grid-cols-[1.12fr_0.88fr]">
+        <div className="relative min-h-[330px] overflow-hidden lg:min-h-full">
+          <picture>
+            {srcMobile && (
+              <source media="(max-width: 768px)" srcSet={srcMobile} />
+            )}
             <motion.img
-              src={imageSrc}
+              {...imageMotion}
+              src={src}
               alt={imageAlt}
-              className="w-full h-full object-cover"
+              className="h-full w-full object-cover"
             />
-
-            <div className="absolute top-5 left-5 text-white z-10">
-              <h2 className={`text-3xl ${titleFontStyle}`}>{title}</h2>
-              <p className="text-lg">{role}</p>
+          </picture>
+          <div
+            aria-hidden="true"
+            className="absolute inset-0 bg-gradient-to-t from-black via-black/35 to-black/5 lg:bg-gradient-to-r lg:from-black/20 lg:via-black/10 lg:to-transparent"
+          ></div>
+          {featured && (
+            <div className="absolute left-5 top-5 border border-orange-300/50 bg-black/45 px-4 py-2 text-[10px] uppercase tracking-[0.3em] text-orange-300 backdrop-blur-sm">
+              Featured Build
             </div>
-          </motion.div>
+          )}
+        </div>
 
-          <div className="absolute bottom-5 left-5">
-            <a href={href} target="_blank" rel="noreferrer">
-              <button className="font-teko font-thin tracking-widest border-2 border-white hover:bg-white hover:text-black px-6 py-2 duration-300 bg-transparent text-white">
-                VIEW WEBSITE
-              </button>
-            </a>
-          </div>
-        </>
-      ) : (
-        <motion.div
-          variants={fadeIn("up")}
-          initial="hidden"
-          whileInView={"show"}
-          viewport={{ once: false, amount: 0.1 }}
-          className="relative w-full h-full"
-        >
-          <div className="absolute inset-0 bg-black/20"></div>
+        <div className="relative z-10 flex flex-col justify-between p-6 md:p-8 lg:p-10">
+          <div>
+            <div className="mb-8 flex items-center justify-between gap-4 text-[10px] uppercase tracking-[0.28em] text-gray-400">
+              <span>{projectNumber}</span>
+              <span>{role}</span>
+            </div>
 
-          <motion.img
-            src={imageSrc}
-            alt={imageAlt}
-            className="w-full h-full object-cover"
-          />
-
-          <motion.div
-            variants={fadeIn("up")}
-            initial="hidden"
-            whileInView={"show"}
-            viewport={{ once: false, amount: 0.1 }}
-            className="absolute flex items-left justify-center top-5 left-5 flex-col w-3/5 md:w-2/5"
-          >
-            <motion.h2
-              variants={fadeIn("left")}
-              initial="hidden"
-              whileInView={"show"}
-              viewport={{ once: false, amount: 0.1 }}
-              className={`text-4xl ${titleTextColor} ${titleFontStyle} mb-10`}
+            <h2
+              className={`${titleFontClass} text-5xl uppercase leading-none tracking-wide text-white md:text-6xl ${
+                featured ? "lg:text-7xl" : "lg:text-6xl"
+              }`}
             >
               {title}
-            </motion.h2>
-            <motion.p
-              variants={fadeIn("right")}
-              initial="hidden"
-              whileInView={"show"}
-              viewport={{ once: false, amount: 0.3 }}
-              className="text-white text-shadow-outline font-thin font-teko tracking-wider mb-5 md:mb-10"
-            >
-              {role}
-            </motion.p>
-            <motion.h2
-              variants={fadeIn("up")}
-              initial="hidden"
-              whileInView={"show"}
-              viewport={{ once: false, amount: 0.3 }}
-              className={`lg:text-6xl md:text-5xl text-5xl ${textColor} font-teko uppercase mb-5 md:mb-10`}
-            >
-              {description}
-            </motion.h2>
-            <p className="text-white mb-5 md:mb-10 text-shadow-outline">
-              {explanation}
+            </h2>
+
+            <div className="mt-6 h-px w-24 bg-orange-300"></div>
+
+            <div className="mt-8 max-w-xl">
+              <p className="font-teko text-3xl uppercase leading-none tracking-wider text-white md:text-4xl">
+                {description}
+              </p>
+              <p className="mt-5 text-sm leading-7 text-gray-300 md:text-base">
+                {explanation}
+              </p>
+            </div>
+          </div>
+
+          <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+            <p className="text-[10px] uppercase tracking-[0.26em] text-gray-500">
+              Case-study preview
             </p>
-            <a href={href} target="_blank" rel="noreferrer">
-              <button className="sm:w-2/5 font-teko font-thin tracking-widest border-2 border-white hover:bg-white hover:text-black px-6 py-2 duration-300 bg-transparent text-white">
-                VIEW WEBSITE
-              </button>
+            <a
+              href={href || "#"}
+              target={isExternal ? "_blank" : undefined}
+              rel="noreferrer"
+              aria-label={`${ctaLabel} for ${title}`}
+              className="inline-flex min-h-11 w-fit items-center border border-white px-5 py-2 font-teko text-lg uppercase tracking-widest text-white transition duration-300 hover:border-orange-300 hover:bg-orange-300 hover:text-black focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-300 focus-visible:ring-offset-4 focus-visible:ring-offset-black"
+            >
+              {ctaLabel}
             </a>
-          </motion.div>
-        </motion.div>
-      )}
-    </div>
+          </div>
+        </div>
+      </div>
+    </motion.article>
   );
 };
 

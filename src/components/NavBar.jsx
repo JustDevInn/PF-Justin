@@ -21,7 +21,7 @@ const NavBar = () => {
   return (
     <nav
       aria-label="Primary navigation"
-      className="fixed top-0 left-0 z-[70] w-full border-b border-white/10 bg-black/70 text-gray-300 backdrop-blur-md"
+      className="fixed top-0 left-0 z-[70] w-full bg-transparent text-gray-300"
     >
       <div className="flex h-20 w-full items-center justify-between px-5 md:px-10">
         <Link
