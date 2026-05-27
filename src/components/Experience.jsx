@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import { DiJsBadge, DiReact, DiNodejs, DiGithubAlt, DiVisualstudio, DiNpm, DiBootstrap, DiCss3, DiHtml5 } from "react-icons/di";
 import { SiExpress, SiTailwindcss, SiMongodb, SiSketch, SiApple } from "react-icons/si";
 import { FaGitAlt, FaWindows } from "react-icons/fa";
@@ -76,9 +76,9 @@ const Experience = () => {
   return (
     <div
       name="technologies"
-      className="px-5 py-20 bg-gradient-to-b from-gray-900 via-black to-gray-900 w-full h-50vh"
+      className="px-5 py-20 bg-gradient-to-b from-gray-900 via-black to-gray-900 w-full h-[50vh]"
     >
-      <div className="max-w-screen-lg mx-auto p-4 flex flex-col justify-center w-full text-white vh-100">
+      <div className="max-w-screen-lg mx-auto p-4 flex flex-col justify-center w-full text-white h-full">
         <div>
           <p className="text-6xl text-white uppercase font-teko tracking-wider p-2 inline">
             Technologies

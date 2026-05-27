@@ -1,155 +1,99 @@
-import React, { useState, useEffect } from "react";
-import { FaBars, FaTimes, FaCircle, FaRegCircle } from "react-icons/fa";
-import { Link, Events, scrollSpy } from "react-scroll";
+import React, { useState } from "react";
+import { FaBars, FaTimes } from "react-icons/fa";
+import { Link } from "react-scroll";
 
 const NavBar = () => {
-  const [nav, setNav] = useState(false);
-  const [activeLink, setActiveLink] = useState(null); // Active section in view
-  const [hoveredLink, setHoveredLink] = useState(null); // Hovered section
-  const [visibleLink, setVisibleLink] = useState(null); // Track which text is visible
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [activeTarget, setActiveTarget] = useState(null);
 
   const links = [
-    { id: 1, link: "home" },
-    { id: 2, link: "portfolio" },
-    { id: 3, link: "technologies" },
-    { id: 4, link: "about" },
-    { id: 5, link: "contact" },
+    { label: "Personal", target: "about" },
+    { label: "Projects", target: "portfolio" },
+    { label: "Services", target: "services" },
+    { label: "Contact", target: "contact" },
   ];
 
-  useEffect(() => {
-    // Register scroll events and update the scroll spy
-    Events.scrollEvent.register("begin", function () {
-      console.log("begin", arguments);
-    });
-
-    Events.scrollEvent.register("end", function () {
-      console.log("end", arguments);
-    });
-
-    scrollSpy.update();
-
-    return () => {
-      Events.scrollEvent.remove("begin");
-      Events.scrollEvent.remove("end");
-    };
-  }, []);
-
-  // Handle showing and hiding the visibleLink based on hover and active section
-  useEffect(() => {
-    let timeoutId;
-
-    // Show the hovered or active link text immediately
-    if (hoveredLink || activeLink) {
-      setVisibleLink(hoveredLink || activeLink);
-
-      // Set a timeout to hide the text after 2 seconds only if no hover or active section
-      timeoutId = setTimeout(() => {
-        setVisibleLink(null); // Hide the text after 2 seconds
-      }, 2000); // 2-second delay
-    }
-
-    return () => clearTimeout(timeoutId); // Cleanup timeout
-  }, [hoveredLink, activeLink]);
+  const linkClassName = (target) =>
+    `cursor-pointer px-1 py-2 text-sm uppercase tracking-[0.22em] transition duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-300 focus-visible:ring-offset-4 focus-visible:ring-offset-black ${
+      activeTarget === target
+        ? "text-white"
+        : "text-gray-300 hover:text-white"
+    }`;
 
   return (
-    <div className="flex z-50 justify-end sm:w-full items-center w-full text-gray-300 bg-transparent fixed text-md">
-      {/* Desktop navbar */}
-      <div className="hidden lg:flex flex-col top-[35%] right-0 fixed">
-        <ul className="hidden lg:flex flex-col gap-y-5">
-          {links.map(({ id, link }) => (
-            <li
-              key={id}
-              className="relative px-4 cursor-pointer tracking-wide capitalize font-medium"
-              onMouseEnter={() => {
-                setHoveredLink(link); // Hover over link
-                clearTimeout();
-              }}
-              onMouseLeave={() => {
-                setHoveredLink(null); // Stop hover
-              }}
-            >
+    <nav
+      aria-label="Primary navigation"
+      className="fixed top-0 left-0 z-[70] w-full border-b border-white/10 bg-black/70 text-gray-300 backdrop-blur-md"
+    >
+      <div className="flex h-20 w-full items-center justify-between px-5 md:px-10">
+        <Link
+          to="home"
+          smooth={true}
+          duration={500}
+          offset={-80}
+          className="cursor-pointer font-teko text-3xl uppercase tracking-[0.18em] text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-300 focus-visible:ring-offset-4 focus-visible:ring-offset-black"
+        >
+          PF-JUSTIN
+        </Link>
+
+        <ul className="hidden items-center gap-10 md:flex">
+          {links.map(({ label, target }) => (
+            <li key={target}>
               <Link
-                to={link}
+                to={target}
                 smooth={true}
                 duration={500}
                 spy={true}
                 offset={-80}
                 isDynamic={true}
-                onSetActive={() => {
-                  setActiveLink(link); // When the section becomes active
-                  clearTimeout();
-                  setTimeout(() => {
-                    setVisibleLink(null); // Hide after 2 seconds
-                  }, 2000);
-                }}
-                className="flex justify-center items-center"
+                onSetActive={() => setActiveTarget(target)}
+                className={linkClassName(target)}
               >
-                {activeLink === link ? <FaCircle className="text-white"/> : <FaRegCircle />}
+                {label}
               </Link>
-              
-              {/* Section name appears/disappears */}
-              <div
-  className={`absolute top-0 right-11 transition-opacity duration-1000 ease-in-out ${
-    visibleLink === link ? 'opacity-100' : 'opacity-0'
-  }`}
->
-  <Link
-    to={link}
-    smooth
-    duration={500}
-    className="ml-2 whitespace-nowrap hover:underline text-white transition-opacity duration-1000 ease-in-out"
-  >
-    {link}
-  </Link>
-</div>
-
-
             </li>
           ))}
         </ul>
+
+        <button
+          type="button"
+          aria-label={isMenuOpen ? "Close navigation menu" : "Open navigation menu"}
+          aria-controls="mobile-navigation"
+          aria-expanded={isMenuOpen}
+          onClick={() => setIsMenuOpen((open) => !open)}
+          className="inline-flex h-11 w-11 items-center justify-center text-gray-200 transition hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-300 focus-visible:ring-offset-4 focus-visible:ring-offset-black md:hidden"
+        >
+          {isMenuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
+        </button>
       </div>
 
-      {/* Mobile navbar */}
-      <div
-        onClick={() => setNav(!nav)}
-        className="flex justify-between items-center h-20 cursor-pointer px-4 z-10 text-gray-300 lg:hidden w-screen"
-      >
-        <div>
-          <h1 className="text-3xl font-teko">JUSTIN PEETERS</h1>
+      {isMenuOpen && (
+        <div
+          id="mobile-navigation"
+          className="fixed inset-x-0 top-20 z-[60] min-h-[calc(100vh-5rem)] border-t border-white/10 bg-gradient-to-b from-black via-gray-950 to-gray-900 px-5 py-10 md:hidden"
+        >
+          <ul className="flex flex-col gap-7">
+            {links.map(({ label, target }) => (
+              <li key={target}>
+                <Link
+                  to={target}
+                  smooth={true}
+                  duration={500}
+                  spy={true}
+                  offset={-80}
+                  isDynamic={true}
+                  onSetActive={() => setActiveTarget(target)}
+                  onClick={() => setIsMenuOpen(false)}
+                  className="block cursor-pointer py-3 font-teko text-5xl uppercase tracking-wider text-gray-200 transition hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-300 focus-visible:ring-offset-4 focus-visible:ring-offset-black"
+                >
+                  {label}
+                </Link>
+              </li>
+            ))}
+          </ul>
         </div>
-        {nav ? <FaTimes size={30} /> : <FaBars size={30} />}
-      </div>
-
-      {nav && (
-        <ul className="flex flex-col justify-center items-center absolute top-0 left-0 w-full h-screen bg-gradient-to-b from-black to-gray-900 text-gray-200">
-          {links.map(({ id, link }) => (
-            <li
-              key={id}
-              className="px-4 cursor-pointer py-6 text-4xl hover:scale-105 uppercase tracking-wide duration-300 hover:text-orange-300"
-            >
-              <Link
-                onClick={() => setNav(!nav)}
-                to={link}
-                smooth={true}
-                duration={500}
-                spy={true}
-                offset={-80}
-                isDynamic={true}
-                onSetActive={() => {
-                  setActiveLink(link); // When the section becomes active
-                  setVisibleLink(link);
-                  setTimeout(() => {
-                    setVisibleLink(null); // Hide after 2 seconds
-                  }, 2000);
-                }}
-              >
-                {link}
-              </Link>
-            </li>
-          ))}
-        </ul>
       )}
-    </div>
+    </nav>
   );
 };
 

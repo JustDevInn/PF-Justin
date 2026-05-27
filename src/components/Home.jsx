@@ -54,6 +54,7 @@ const Home = () => {
 
   return (
   <div
+      id="home"
       name="home"
       className="min-h-screen w-full bg-gradient-to-b from-gray-900 via-black to-gray-900 flex flex-col justify-center items-center pt-20 lg:pt-0" >
     <div className="flex flex-col items-center justify-center text-center">
@@ -129,6 +130,5 @@ const Home = () => {
 };
 
 export default Home;
-
 
 

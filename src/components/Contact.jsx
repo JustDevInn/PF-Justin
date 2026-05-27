@@ -7,7 +7,8 @@ const Contact = () => {
   return (
     <div
       name="contact"
-      className="px-5 w-full md:pt-80 h-50vh bg-gradient-to-b from-black to-gray-900 text-white"
+      id="contact"
+      className="px-5 w-full md:pt-80 h-[50vh] bg-gradient-to-b from-black to-gray-900 text-white"
     >
       <div className="flex flex-col p-4 justify-center max-w-screen-lg mx-auto">
         <motion.div
@@ -40,7 +41,7 @@ const Contact = () => {
               className="p-2 bg-transparent border text-gray-300 focus:outline-none"
             />
             <input
-              type="text"
+              type="email"
               name="email"
               placeholder="Enter your email"
               className="my-4 p-2 bg-transparent border text-gray-300 focus:outline-none"
